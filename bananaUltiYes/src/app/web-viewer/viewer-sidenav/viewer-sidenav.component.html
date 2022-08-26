@@ -1,0 +1,108 @@
+
+<div  class="container1-adj " >  
+    <ul  style="margin-top: 0px;background-color:#1976d2; list-style: none;">     
+        <li style="padding:2px; color: white">Hello, {{userName_vb}}</li>
+    </ul>
+    <ul style="padding-left: 20px; padding-bottom: 0px;">  
+        <div onclick="" style="color: black;font-weight: bold;">
+            <span style="margin: 0px;font-size: small;"  >
+                {{announcementHeading_vb}} 📢</span>
+        </div> 
+        <!-- <li class="list"><h6 style="margin-top: 0px; margin-bottom: 0px; color: black; font-weight: normal;" > 
+            <input type="checkbox" name="1" title="{{menu_instant_ads_vb}}">
+            <label for="1">{{menu_instant_ads_vb}}</label></h6></li>
+         <li class="list"><h6 style="margin-top: 0px; margin-bottom: 0px; color: black;  font-weight: normal;"> 
+            <input type="checkbox" name="2" title="{{menu_instant_ads_vb}}">
+            <label for="2">{{menu_weekly_ads_vb}}</label></h6></li>
+        <li class="list"><h6 style="margin-top: 0px; margin-bottom: 0px; color: black;  font-weight: normal;"> 
+            <input type="checkbox" name="3" title="{{menu_instant_ads_vb}}">
+            <label for="3">{{menu_monthly_ads_vb}}</label></h6></li>    
+        <li class="list"><h6 style="margin-top: 0px; margin-bottom: 0px; color: black;  font-weight: normal;"> 
+            <input type="checkbox" name="4" title="{{menu_instant_ads_vb}}">
+            <label for="4">{{menu_yearly_ads_vb}}</label></h6></li>   -->
+            <table style="border: 0px;">
+                <div *ngFor="let category_vb of categoryDto_vb let i_vb=index">
+                    <tr *ngIf="i_vb < 4" style="margin-bottom: 0px;margin-top: 0px;">
+                        <td style="margin: 0px;padding: 0px;">
+                            <input *ngIf="selectedAdType_vb.indexOf(','+category_vb.p13+',') > -1 else elseblock1" type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" title="{{category_vb.p2}}" (click)="adTypeSelected_mt(category_vb.p13)" 
+                            checked >
+
+                        <ng-template #elseblock1><input  type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" 
+                            title="{{category_vb.p2}}" (click)="adTypeSelected_mt(category_vb.p13)"></ng-template></td>
+
+                        <td style="margin: 0px;padding: 0px;">
+                            <h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;" >
+                            <label for="{{category_vb.p13}}">&nbsp;{{category_vb.p2}}</label></h6> </td>
+                    </tr>    
+                </div>           
+            </table>
+    </ul>
+    <ul style="padding: 20px;margin-top: 10px; list-style: none;">
+        <div onclick="" style="color: #444040">
+            <h6 style="margin: 0px;color: black;font-weight: bold;"  >{{user_menu_heading_vb}}</h6>
+            </div> 
+            <div *ngIf="!userLogin_vb">
+        <li class="list"><h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;" >
+            <a class="link" href="{{this.authServicesService_vb.loginDnsName_vb}}/showLogin/{{this.apiKeyDto_vb.apikey_vb}}">
+        {{login_vb}}</a></h6>  </li></div>
+        <li class="list"><h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;" >
+            <a class="link" href="/xskdihhsdowqi2423156471hviweroqw017ewg1632jvhq2/showQR/{{this.apiKeyDto_vb.apikey_vb}}/{{this.apiKeyDto_vb.language_vb}}" target="_blank">
+                <img src="/assets/images/donate244A.png"> {{pay_not_in_cash_vb}}</a></h6>  </li>
+        <div *ngIf="userLogin_vb">
+            <li class="list"> <h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;">
+                <a  class="link"  [routerLink]="['/xskdihhsdowqi2423156471hviwerocw017ewg1632jvhq2/cart/',apiKeyDto_vb.apikey_vb,userDto_vb.userId_vb]" >
+                    <img src="/assets/images/secret17.png"> Cart</a></h6></li>  
+            <li class="list"><h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;">
+                <a class="link" (click)="loadLikedAds_mt()">
+                    <img src="/assets/images/useful.png"> {{ my_useful_ads_vb}}</a></h6>  </li>            
+            <li class="list"> <h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;">
+                <a  class="link"  [routerLink]="'/xskdihhsdowqi2423156471hviweroqw017ewg1632jvhq2/resetSecretNumber'" target="_blank">
+                    <img src="/assets/images/secret17.png"> {{reset_secret_number_vb}}</a></h6></li>  
+            <li *ngIf="uploadUrl_vb != null" class="list"> <h6 style="margin: 0px; color: black;font-size: small;">
+                <a class="link" href="{{uploadUrl_vb}}{{this.apiKeyDto_vb.apikey_vb}}/{{this.authServicesService_vb.language_vb}}" >
+                    <img src="/assets/images/upload17.jpeg"> {{ merchant_upload_screen_vb }}</a></h6></li>
+            <li class="list"> <h6 style="margin: 0px; color: black;font-size: small;">
+                <a class="link"  [routerLink]="['/xskdihhsdowqi2423156471hviweroqw017ewg1632jvhq2/userSettings/',apiKeyDto_vb.apikey_vb]" target="_blank">
+                {{ change_lang_menu_vb }}</a></h6></li>
+            <li class="list"><h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;">
+                 <a class="link" (click)="logout_mt()">
+                 {{logout_vb}}</a></h6>  </li>              
+        </div>
+    </ul>
+    <ul style="padding-left: 20px;margin-bottom: 10px;margin-top: 0px; list-style: none;">        
+        <div onclick="" style="color: #444040">
+            <h6 style="margin: 0px;font-size: small;color: black;font-weight: bold;"  >{{filter_vb}}</h6>
+            </div>   
+            <div *ngIf="!userLogin_vb">
+                <div *ngFor="let category_vb of categoryDto_vb let i_vb=index" style="align-items: center;border: 0px solid rgb(119, 15, 93)">
+                    <li *ngIf="i_vb > 3 && i_vb < 5" style="margin-bottom: 0px;margin-top: 0px;"><h6 style="margin: 0px; color: black; font-weight: normal; font-size: small;" >
+                        <input *ngIf="selectedFilter_vb.indexOf(','+category_vb.p13+',') > -1 else elseblock2" type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" title="{{category_vb.p2}}"  (click)="filterSelected_mt(category_vb.p13)" 
+                        checked>
+
+                        <ng-template #elseblock2><input type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" title="{{category_vb.p2}}"  (click)="filterSelected_mt(category_vb.p13)" ></ng-template>
+                        <label for="{{category_vb.p13}}">&nbsp;{{category_vb.p2}}</label></h6>  </li>
+                </div>                    
+                <li style="margin-bottom: 0px;margin-top: 0px;">
+                    <h6 style="margin: 0px; color: black; font-weight: normal; font-size: small;" >
+                        <a class="link" href="{{this.authServicesService_vb.loginDnsName_vb}}/showLogin/{{this.apiKeyDto_vb.apikey_vb}}">
+                            {{category_more_vb}}</a></h6>  </li>            
+            </div>
+            <div *ngIf="userLogin_vb">
+                <div *ngFor="let category_vb of categoryDto_vb let i_vb=index" style="align-items: center;border: 0px solid rgb(119, 15, 93)">
+                    <li *ngIf="i_vb > 3 " style="margin-bottom: 0px;margin-top: 0px;"><h6 style="margin: 0px; color: black; font-weight: normal; font-size: small;" >
+                        <input *ngIf="selectedFilter_vb.indexOf(','+category_vb.p13+',') > -1 else elseblock2" type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" title="{{category_vb.p2}}"  (click)="filterSelected_mt(category_vb.p13)" 
+                        checked>
+
+                        <ng-template #elseblock2><input type="checkbox" name="{{category_vb.p13}}" id="{{category_vb.p13}}" title="{{category_vb.p2}}"  (click)="filterSelected_mt(category_vb.p13)" ></ng-template>
+                        <label for="{{category_vb.p13}}">&nbsp;{{category_vb.p2}}</label></h6>  </li>
+                </div>  
+            </div>
+    </ul>
+    <ul style="padding: 20px; margin-bottom: 100px;margin-top: 30px; list-style: none;">
+        <li class="list"><h6 style="margin: 0px; color: black; font-weight: normal;font-size: small;" >
+            <a class="link"   [routerLink]="'/xskdihhsdowqi2423156471hviweroqw017ewg1632jvhq2/contactUs'" target="_blank">
+        {{contactUs_vb}}</a></h6>  </li>
+        
+    
+    </ul>        
+</div>

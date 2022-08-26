@@ -1,0 +1,57 @@
+export const ToolbarPropertiesUr = {
+  ownerToolBar_heading_msg1: 'اشتہار کے مالک (Ad)',
+  ownerToolBar_heading_msg: 'شوسےٹی',
+};
+
+export const LoginScreenPropertiesUr = {
+    use_phone_auth_msg: 'فون کے ساتھ',
+    use_email_auth_msg: 'ای میل کے ساتھ',
+    phone_input_label_msg: 'فون نمبر',
+    email_input_label_msg: 'ای میل',
+    secretNum_input_label_msg: 'تین ہندسہ خفیہ نمبر',
+    required_label_msg: 'اہم ہے *',
+    required_email_phone_label_msg: ' اہم ہے * "فون نمبر" اور "ای میل" صرف ایک',
+    label_submit_upload_ads_msg: 'اسے بھیجیں',
+    login_heading_msg: 'اپنی شناخت کرو',  
+    login_app_desc_1_msg: 'اپنی کسی بھی جگہ کی تمام دکان یا کاروبار دیکھیں',
+    login_app_desc_4_msg: '',
+    login_app_desc_5_msg: '',
+    login_app_desc_2_msg: 'ان کی پیش کشیں اور کون سے نیا اور مرچنٹ کے ساتھ چھوٹ ہے',
+    login_app_desc_3_msg: 'باہر شاپنگ میں آن لائن شاپنگ سے زیادہ تفریح ​​ہوتا ہے',
+    r_u_new_user_label_msg:  ' نیا صارف >>',
+    go_to_register_here_msg: 'رجسٹر کریں',
+    msg_refresh_msg: ' دبائیں۔ انٹرنیٹ چیک کریں F5', 
+    usr_not_exist_msg: 'براہ کرم صحیح معلومات دیں',
+    forgot_secret_number_msg: 'اپنا پاس ورڈ بھول گئے؟, یہاں دبائیں',
+    reset_secret_heading_msg: 'خفیہ نمبر کے لئے ہم سے رابطہ کریں',
+    reset_secret_message_msg: 'ہم آپ کو دیئے گئے فون نمبر یا ای میل پر رابطہ کریں گے',
+    reset_secret_messag2_msg: 'ہم جلد ہی آپ سے رابطہ کریں گے',
+  };
+
+export const RegisterScreenPropertiesUr = {
+    userName_input_label_msg: 'کاروبار کا نام',
+    secret_number_required_msg: '',
+    use_phone_auth_msg: 'فون کے ساتھ',
+    use_email_auth_msg: 'ای میل کے ساتھ',
+    phone_input_label_msg: 'فون نمبر',
+    email_input_label_msg: 'ای میل',
+    secretNum_input_label_msg: 'تین ہندسہ خفیہ نمبر',
+    required_label_msg: 'اہم ہے *',
+    required_email_phone_label_msg: ' اہم ہے * "فون نمبر" اور "ای میل" صرف ایک',
+    label_submit_upload_ads_msg: 'اسے بھیجیں',
+    register_label_msg: 'رجسٹر کریں',
+    register_app_desc_1_msg: 'رجسٹر کریں',
+    register_app_desc_2_msg: '.....اور',
+    register_app_desc_3_msg: 'اپنی کسی بھی جگہ کی تمام دکان یا کاروبار دیکھیں',
+    register_app_desc_6_msg: 'کاغذات گاہکوں تک پہنچنے اور آگاہ کرنے کا ایک زبردست طریقہ ہے',
+    register_app_desc_7_msg: 'دکان کے قریب قریب سے معلومات حاصل کریں',
+    register_app_desc_4_msg: 'ان کی پیش کشیں اور کون سے نیا اور مرچنٹ کے ساتھ چھوٹ ہے',
+    register_app_desc_5_msg: 'باہر شاپنگ میں آن لائن شاپنگ سے زیادہ تفریح ​​ہوتا ہے',
+    
+    already_a_user_label_msg:'پہلے ہی رجسٹرڈ ہے >>',
+    go_to_login_here_msg: 'اپنی شناخت کرو',
+    usr_exist_msg: "صارف پہلے سے موجود ہے",
+    msg_refresh_msg: ' دبائیں۔ انٹرنیٹ چیک کریں F5', 
+    or_msg: 'یا',
+    
+  };

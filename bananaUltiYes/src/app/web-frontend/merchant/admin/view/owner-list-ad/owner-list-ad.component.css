@@ -1,0 +1,123 @@
+.container1{
+    flex-basis: auto;
+    flex-wrap: wrap;
+    border: 0px #111 solid;
+    z-index: 10;
+    margin: 12px;
+    margin-top: 110px;
+}
+.listMyAdsHeading{
+    padding:12px; 
+    font-size: 26px; 
+    font-style: italic;
+    margin: 13px;
+}
+.tabContent{
+    padding-left : 20px; 
+    padding-top : 10px; 
+    border: 2px solid #c5c7c9;
+    border-radius: 5px;
+}
+
+.list-header{
+    padding-left : 20px; 
+    padding-top : 10px; 
+    border: 2px solid #c5c7c9;
+    border-radius: 5px;
+}
+
+.list-content-shade1{
+    padding-left : 20px; 
+    padding-top : 20px; 
+    margin-top : 2px;
+    border-left: 2px solid #c5c7c9;
+    border-right: 2px solid #c5c7c9;
+    background-color: rgb(224, 230, 224);
+    /* border-radius: 5px; */
+}
+
+.list-content-shade2{
+    padding-left : 20px; 
+    padding-top : 20px; 
+    margin-top : 4px;
+    border-left: 2px solid #c5c7c9;
+    border-right: 2px solid #c5c7c9;
+    background-color: rgb(232, 241, 232);
+    /* border-radius: 5px; */
+}
+
+.col-margin{
+ margin-left: 2px;
+ background-color: #ffffff;
+}
+
+.overflow-wrap {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .para_view1 {
+    margin: 0 ;
+    
+    border: solid 0px #ccc;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: #626364;
+    font-size: 1em;
+    word-spacing: 1px;
+    
+  }
+  .para_view2 {
+    margin: 0 ;
+    max-width: 500px; 
+    border: solid 2px #ccc;
+    padding: 0px;
+  }
+  .para_view3 {
+    margin: 0 ;
+    max-width: 950px; 
+    border: solid 2px #ccc;
+    padding: 0px;
+  }
+
+  .disType1_BageImg{
+    display: inline-block; margin-right: 12px; margin-left: 212px; vertical-align: middle;
+  }
+  .disType2_BageImg{
+    display: inline-block; margin-right: 12px; margin-left: 406px; vertical-align: middle;
+  }
+  .disType3_BageImg{
+    display: inline-block; margin-right: 12px; margin-left: 543px; vertical-align: middle;
+  }
+  .bottomFavIcon{
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  .card300{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 300px;
+    border: 1px solid #bfc1c4; 
+    margin-left: 10px;
+  }
+
+  .card500{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 500px;
+    border: 1px solid #bfc1c4; 
+    margin-left: 10px;
+  }
+
+  .card650{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 650px;
+    border: 1px solid #bfc1c4; 
+    margin-left: 10px;
+    margin-right: 10px;
+  }

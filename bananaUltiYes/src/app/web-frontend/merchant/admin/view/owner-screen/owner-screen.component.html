@@ -1,0 +1,434 @@
+<app-owner-toolbar></app-owner-toolbar>
+
+<div class="container1"  *ngIf="!gotoTargetsAreaScreen_vb">
+        <div class=" uploadStep1Heading">
+            {{upload_ads_step1_heading_vb}}            
+        </div>
+        <form [formGroup]="ownerUploadForm_vb" (ngSubmit)="onSubmit_mt()" >
+            <!-- <div class="row">
+                    <div class="col-sm-1">
+                    <label style="padding: 2px;">
+                        <upload-ads-msg messageSeek_vb="status_label"></upload-ads-msg>
+                    </label> 
+                    </div>  
+                    <div class="col-sm-2 form-check">
+                        <input class="form-check-input" type="radio" id='status1' name="status_vb" formControlName="status_vb" value="Y" >
+                        <label class="form-check-label" for="status1">
+                            <upload-ads-msg messageSeek_vb="status_label"></upload-ads-msg>: <upload-ads-msg messageSeek_vb="status_yes_label"></upload-ads-msg>
+                        </label>
+                    </div>
+                    <div class="col-sm-2 form-check">
+                        <input class="form-check-input" type="radio" id='status2' name="status_vb" formControlName="status_vb" value="N" >
+                        <label class="form-check-label" for="status2">
+                            <upload-ads-msg messageSeek_vb="status_label"></upload-ads-msg>: <upload-ads-msg messageSeek_vb="status_no_label"></upload-ads-msg>                            
+                        </label>
+                    </div>
+                
+            </div>   -->
+            <ul class="nav !important " >
+                <li class="nav-item " style="width: 100%; align-items: flex-end;" >
+                    <div class="row image-view-parent tabContent_status">
+                        <!-- <div class="col-sm-1">
+                        <label style="padding: 2px;">
+                            <upload-ads-msg messageSeek_vb="status_label"></upload-ads-msg> 
+                        </label> 
+                        </div>   -->
+                        <div class="col-xs-6 col-sm-2 form-check">
+                            <input class="form-check-input" type="radio" id='status1' name="status_vb" formControlName="status_vb" value="Y" >
+                            <label class="form-check-label" for="status1">
+                                {{status_yes_label_vb}}: {{status_label_vb}}
+                            </label>
+                        </div>
+                        <!-- <div class="col-xs-4 col-sm-2">
+                             
+                            </div> -->
+                        <div class="col-xs-6 col-sm-2 form-check">
+                            <input class="form-check-input" type="radio" id='status2' name="status_vb" formControlName="status_vb" value="N" >
+                            <label class="form-check-label" for="status2">
+                                {{status_no_label_vb}}: {{status_label_vb}}
+                            
+                            </label>
+                        </div>
+                    
+                </div>   
+                </li>                
+            </ul>
+
+
+        <ul class="row nav !important " style="border: 0px solid rgb(216, 212, 219); padding: 5px;">
+            <li class="nav-item col-xs-12" >
+                
+                <div name='verticalDiv' class="image-view-parent "> <!--for 12 ad type parent-->
+                    <div name='verticalDiv' class="image-view-parent tabContent_adType"><!--for 12 ad type RE-DO-->
+                        <label style="padding: 2px;">
+                            {{ad_type_heading_vb}}
+                        </label> 
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios1' name="adType_vb" formControlName="adType_vb" value="1" >
+                            <label class="form-check-label" for="adTypeRadios1">
+                                {{ad_type_12_hrs_vb}} 
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios2' name="adType_vb" formControlName="adType_vb" value="2" >
+                            <label class="form-check-label" for="adTypeRadios2">
+                                {{ad_type_1_week_vb}} 
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios3' name="adType_vb" formControlName="adType_vb" value="3" >
+                            <label class="form-check-label" for="adTypeRadios3">
+                                {{ad_type_1_month_vb}} 
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios4' name="adType_vb" formControlName="adType_vb" value="4">
+                            <label class="form-check-label" for="adTypeRadios4">
+                                {{ad_type_1_year_vb}} 
+                            </label>
+                        </div>
+                        <div class="col">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerUploadForm_vb.controls['adType_vb'].getError('required')">
+                                <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                            </span>                                                
+                        </div>
+                        <!-- <h5 class="card-title image-view" (click)="showSampleView1()">Sample View 1</h5>
+                        <h5 class="card-title image-view" (click)="showSampleView2()">Sample View 2</h5>
+                        <h5 class="card-title image-view" (click)="showSampleView3()">Sample View 3</h5> -->
+                    </div> 
+                    <div name='verticalDiv' class="image-view-parent tabContent_displayType">
+                        <label style="padding: 2px;">
+                            {{displayType_heading_vb}}
+                        </label>                 
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adDisplayType1' name="adDisplayType_vb" (click)="showSampleView1_mt()" formControlName="adDisplayType_vb" value="1" >
+                            <label class="form-check-label" for="adDisplayType1">
+                                {{displayType1_vb}}
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adDisplayType2' name="adDisplayType_vb" (click)="showSampleView2_mt()" formControlName="adDisplayType_vb" value="2" >
+                            <label class="form-check-label" for="adDisplayType2">
+                                {{displayType2_vb}}                            
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adDisplayType3' name="adDisplayType_vb" (click)="showSampleView3_mt()" formControlName="adDisplayType_vb" value="3" >
+                            <label class="form-check-label" for="adDisplayType3">
+                                {{displayType3_vb}}
+                            </label>
+                        </div>
+                        <!-- <h5 class="card-title image-view" (click)="showSampleView1()">Sample View 1</h5>
+                        <h5 class="card-title image-view" (click)="showSampleView2()">Sample View 2</h5>
+                        <h5 class="card-title image-view" (click)="showSampleView3()">Sample View 3</h5> -->
+                     </div>
+
+                </div>
+            </li>
+            
+            <!-- <li class="nav-item " style="margin-left: 20px;margin-right: 20px;"></li> -->
+            <li class="nav-item col-xs-12" style="align-items: center;border: 0px solid rgb(11, 130, 0);padding-left: 25px;" 
+                        *ngIf="showSampleView1Flag_vb">              
+                <img  src="{{imageSrc_vb}}" alt="Card image cap1" width="250px" height="250px" (click)="browseFile_mt()">
+                <div class="card mb-3">
+                <div  >
+                <p class="card-text para_view1 overflow-wrap" >{{this.ownerScreen_vb.ownerUploadForm_vb.controls.contentDesc_vb.value}}</p>
+                </div>
+                <div *ngIf="ownerFileValidator_vb">                    
+                    <span class="text-danger alert-danger"
+                        *ngIf="ownerUploadForm_vb.controls['file_vb'].getError('required')">
+                        <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                    </span>                                                
+                </div>
+                <!-- <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div> -->
+              </div>
+            </li>
+            <li class="nav-item col-xs-12" style="align-items: center;border: 0px solid rgb(11, 130, 0);padding-left: 25px;" 
+                        *ngIf="showSampleView2Flag_vb">              
+                <img  src="{{imageSrc_vb}}" alt="Card image cap2" width="500px" height="500px" (click)="browseFile_mt()">
+                <div class="card mb-3" >
+                <div  >
+                    <p class="card-text para_view2 overflow-wrap" >{{this.ownerScreen_vb.ownerUploadForm_vb.controls.contentDesc_vb.value}}</p>
+                </div>
+                <div *ngIf="ownerFileValidator_vb">                    
+                    <span class="text-danger alert-danger"
+                        *ngIf="ownerUploadForm_vb.controls['file_vb'].getError('required')">
+                        <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                    </span>                                                
+                </div>
+                <!-- <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div> -->
+              </div>
+            </li>
+            <li class="nav-item col-xs-12" style="align-items: center;border: 0px solid rgb(11, 130, 0);padding-left: 25px;" 
+                        *ngIf="showSampleView3Flag_vb">                
+                    <img  src="{{imageSrc_vb}}" alt="Card image cap3" width="950px" height="950px" (click)="browseFile_mt()">
+                    <div class="card">                        
+                        <div >
+                        <p class="card-text para_view3 overflow-wrap">{{this.ownerScreen_vb.ownerUploadForm_vb.controls.contentDesc_vb.value}}</p>
+                    </div>
+                    <div *ngIf="ownerFileValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerUploadForm_vb.controls['file_vb'].getError('required')">
+                            <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                        </span>                                                
+                    </div>
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div> -->
+                </div>
+            </li>
+            <li>
+                <div class="form-group" style="display: none;">
+                    <div class="tabContent_FileBrowse">
+                    <label>
+                        {{chose_ad_label_vb}}
+                    </label>
+                    <div class="input-group-lg ">
+                        <div class="custom-file">
+                        <input #inputFileBrowse type="file" class="custom-file-input" formControlName="file_vb" (change)="onFileSelect_mt($event)" accept='image/*'>
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">{{showFileName_vb}}</label>
+                        </div>
+                    </div>
+                    <div *ngIf="ownerFileValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerUploadForm_vb.controls['file_vb'].getError('required')">
+                            <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                        </span>                                                
+                    </div>
+                    </div>
+                </div> 
+            </li>
+        </ul>
+        
+
+        <!-- <div style="padding: 1em; border: 1px solid #c5c7c9">  
+        <div class="row"> 
+            <div class="col-lg-4" style="padding: .5em;">
+                Price(including Tax): <input  type="text"></div> 
+            <div class="col-lg-4" style="padding: .5em;">
+                Tax (%) <input  type="text"></div> 
+            <div class="col-lg-4" style="padding: .5em;">
+                Tax Detail: <input  type="text"></div> 
+            
+        </div>    
+        </div> -->
+            <!-- <div >
+                <div class="row spacing">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" id='adTypeRadios1' name="adType" formControlName="adType" value="1" checked>
+                        <label class="form-check-label" for="adTypeRadios1">
+                            <upload-ads-msg messageSeek_vb="ad_type_12_hrs"></upload-ads-msg> 
+                        </label>
+                    </div>
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" id='adTypeRadios2' name="adType" formControlName="adType" value="2" >
+                        <label class="form-check-label" for="adTypeRadios2">
+                            <upload-ads-msg messageSeek_vb="ad_type_1_week"></upload-ads-msg> 
+                        </label>
+                    </div>
+                </div>
+                <div class="row spacing">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" id='adTypeRadios3' name="adType" formControlName="adType" value="3" >
+                        <label class="form-check-label" for="adTypeRadios3">
+                            <upload-ads-msg messageSeek_vb="ad_type_1_month"></upload-ads-msg> 
+                        </label>
+                    </div>
+                    
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" id='adTypeRadios4' name="adType" formControlName="adType" value="4">
+                        <label class="form-check-label" for="adTypeRadios4">
+                            <upload-ads-msg messageSeek_vb="ad_type_1_year"></upload-ads-msg> 
+                        </label>
+                    </div>       
+                </div>  -->
+                
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group"><!--Ad describe-->
+                    <div >
+                        <!-- <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                            <upload-ads-msg messageSeek_vb="desc_offer_label"></upload-ads-msg></span>
+                        </div> -->
+                        <label class="label_desc">{{desc_offer_label_vb}}</label>
+                        <textarea formControlName="contentDesc_vb" (keyup)="onKeyCountChar_mt($event)" rows="8" maxlength={{contentDescMaxLength_vb}} class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm"></textarea>
+                        <h5> {{desc_word_length_label_vb}}{{contentDescCurrentLength_vb}}/{{contentDescMaxLength_vb}}</h5>
+                    </div>
+                    
+                </div> 
+            </div>
+            <div class="col-lg-1">
+                <label style="padding: inherit;"></label>
+            </div>
+            <div class="col-lg-4">
+                <div class="tabContent">
+                    <div class="row spacing">
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" formControlName="identify_vb" name="identify_vb" id="phoneRadios" value="phone"  (click)="activatePhoneContent_mt()" checked>
+                            <label class="form-check-label" for="phoneRadios">
+                                {{use_phone_auth_vb}}
+                            </label>                    
+                        </div>
+                        
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" formControlName="identify_vb" name="identify_vb" id="emailRadios" value="email"  (click)="activateEmailContent_mt()">
+                            <label class="form-check-label" for="emailRadios">
+                                {{use_email_auth_vb}}
+                            </label>
+                        </div>           
+                    </div>
+                    <div class="form-group" *ngIf="togglePhoneActive_vb">
+                        <div >
+                            <!-- <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">
+                                <upload-ads-msg messageSeek_vb="phone_input_label"></upload-ads-msg></span>
+                            </div> -->
+                            <label class="label_desc">{{phone_input_label_vb}}</label>
+                            <input type="text" formControlName="ownerPhone_vb" class="form-control" 
+                                    aria-label="Large" aria-describedby="inputGroup-sizing-sm" maxlength="15">                            
+                        </div>
+                        <div *ngIf="identifyPhoneValidator_vb">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerUploadForm_vb.controls['ownerPhone_vb'].getError('required')">
+                                <upload-ads-msg messageSeek_vb="required_email_phone_label_msg"></upload-ads-msg>
+                            </span>                                                       
+                        </div>
+                    </div>
+                    <div class="form-group" *ngIf="!togglePhoneActive_vb">
+                        <div >
+                            <!-- <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg"><upload-ads-msg messageSeek_vb="email_input_label"></upload-ads-msg></span>
+                            </div> -->
+                            <label class="label_desc">{{email_input_label_vb}}</label>
+                            <input type="text" formControlName="ownerEmail_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" maxlength="30">
+                        </div>
+                        <div *ngIf="identifyEmailValidator_vb">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerUploadForm_vb.controls['ownerEmail_vb'].getError('required')">
+                                <upload-ads-msg messageSeek_vb="required_email_phone_label_msg"></upload-ads-msg>
+                            </span>                                                       
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">{{secretNum_input_label_vb}}</span>
+                        </div>
+                        <input type="password"  formControlName="secretNumber_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" 
+                                maxlength="3">
+                        
+                    </div>
+                    <div *ngIf="secretNumberValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerUploadForm_vb.controls['secretNumber_vb'].getError('required')">
+                            <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                        </span>                                                
+                    </div>
+                </div> 
+                <div>
+                    <button type="submit" class="btn btn-secondary">{{label_submit_upload_ads_vb}}</button>
+                    <div style="padding:20px;"><h1> {{uploadMsg_vb}}
+                        </h1></div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6">
+                <ul class="nav vd1 tabContent_adType" style="border: 0px solid indigo; padding-left: 21px;">
+                    <li class="nav-item " style="width: 30%; align-items: flex-end;" >
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios1' name="adType_vb" formControlName="adType_vb" value="1" >
+                            <label class="form-check-label" for="adTypeRadios1">
+                                <upload-ads-msg messageSeek_vb="ad_type_12_hrs"></upload-ads-msg> 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="nav-item " style="width: 30%; align-items: flex-end;" >
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios2' name="adType_vb" formControlName="adType_vb" value="2" >
+                            <label class="form-check-label" for="adTypeRadios2">
+                                <upload-ads-msg messageSeek_vb="ad_type_1_week"></upload-ads-msg> 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="nav-item " style="width: 30%; align-items: flex-end;" >
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios3' name="adType_vb" formControlName="adType_vb" value="3" >
+                            <label class="form-check-label" for="adTypeRadios3">
+                                <upload-ads-msg messageSeek_vb="ad_type_1_month"></upload-ads-msg> 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="nav-item " style="width: 30%; align-items: flex-end;" >
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" id='adTypeRadios4' name="adType_vb" formControlName="adType_vb" value="4">
+                            <label class="form-check-label" for="adTypeRadios4">
+                                <upload-ads-msg messageSeek_vb="ad_type_1_year"></upload-ads-msg> 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="nav-item" *ngIf="adTypeValidator_vb">
+                        <div >                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerUploadForm_vb.controls['adType_vb'].getError('required')">
+                                <upload-ads-msg messageSeek_vb="required_label"></upload-ads-msg>
+                            </span>                                                
+                        </div>
+                    </li>
+                </ul>
+            </div>         -->
+            <div class="col-lg-1">
+                <label style="padding: inherit;"></label>
+            </div>
+        </div> <!--row end-->
+        <div style="margin: 6px;border: 1px solid #c5c7c9">   
+            <div class="row">   
+                <div class="col-lg-12" style="margin: 3px;">
+                    {{chose_category_label_vb}}
+                </div>
+            </div>
+            <div *ngIf="categoryTypeValidator_vb">                    
+                <span class="text-danger alert-danger"
+                    *ngIf="ownerUploadForm_vb.controls['categoryType_vb'].getError('required')">
+                    <upload-ads-msg messageSeek_vb="required_label_msg"></upload-ads-msg>
+                </span>                                                
+            </div>
+            <div class="row">            
+                    <div *ngFor="let category_vb of categoryDto_vb let i_vb=index" style="align-items: center;border: 0px solid rgb(119, 15, 93)">
+                        <div class="col" *ngIf="i_vb > 3" style="margin-bottom: 0px;margin-top: 0px;">
+                            <h5 style="margin: 0px; color: black; font-weight: normal;" >
+                            <input type="checkbox" name="{{category_vb.p13}}" 
+                                id="{{category_vb.p13}}" title="{{category_vb.p2}}" 
+                                (click)="categorySelected_mt(category_vb.p13)" 
+                                [checked]="category_vb.p1 =='1'">
+                            <label style="margin: 2px;font-size:14px" for="{{category_vb.p13}}">{{category_vb.p2}}</label></h5>  
+                        </div>
+                    </div>                
+            </div>
+        </div>
+        <!-- <div>
+            <button type="submit" class="btn btn-secondary">{{apiKeyDto_vb.apikey_vb}}<upload-ads-msg messageSeek_vb="label_submit_upload_ads"></upload-ads-msg></button>
+            <div style="padding:20px;"><h1>{{uploadMsg_vb}}</h1></div>
+        </div> -->
+    </form>            
+        <!-- <h1 style="margin-top:20px;">
+            <upload-ads-msg messageSeek_vb="your_ads_label"></upload-ads-msg>
+        </h1>         
+         <img id="blah" [src]="imageSrc_vb" alt="your image" height="200" width="200"/> -->
+</div>
+
+ <div *ngIf="gotoTargetsAreaScreen_vb">{{uploadMsg_vb}}
+    <app-owner-target-area [msgFromUpload_vb]="uploadMsg_vb"></app-owner-target-area>
+    <!-- <a href="/tellTargets">Target Areas</a> -->
+    
+ </div>
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

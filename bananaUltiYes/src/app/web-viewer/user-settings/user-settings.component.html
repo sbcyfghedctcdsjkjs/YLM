@@ -1,0 +1,85 @@
+<div class="toolbar" role="banner" >
+   
+    <!-- <label style="font-size:30px; word-spacing:100px; margin-top: 10px; margin-left: 10px;"> <toolbar-msg messageSeek_vb="ownerToolBar_heading_msg"></toolbar-msg></label> -->
+    <img src="/assets/images/appName.png" />
+    <label>&nbsp;&nbsp;&nbsp; ಅ એ অ अ A ش ല म ਉ அ సం</label>
+    </div>
+<div class="container">
+    <div class="control_display"></div>
+    
+    <div class="container1" >
+        <form [formGroup]="loginForm_vb" style="margin-left: 4px;" (ngSubmit)="changeLangSetting_mt()" >
+            <div class="float-md-right" style="padding-right: 5px; display: inline-block;">
+                <div style="color: #444040; margin-left: 10px;">
+                    <h3 style="margin: 0px;"  > ಅ એ অ अ A ش ല म ਉ அ సం</h3>
+                </div> 
+                <ul style="list-style: none;">    
+                    <li style="margin-bottom: 10px;margin-top: 0px;">&nbsp;</li>
+                    <li style="margin-bottom: 10px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="ur" name="lang_vb" formControlName="lang_vb" title="اردو" value="ur">
+                        <label for="ur">اردو</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 10px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="bn" name="lang_vb" formControlName="lang_vb" title="বাংলা" value="bn">
+                        <label for="bn">বাংলা</label></h5>  
+                    </li>
+
+                    <li style="margin-bottom: 10px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="en" name="lang_vb" formControlName="lang_vb" title="English" value="en">
+                        <label for="en">English</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 10px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="gu" name="lang_vb" formControlName="lang_vb" title="ગુજરાતી" value="gu">
+                        <label for="gu">ગુજરાતી</label></h5>  
+                    </li>
+
+                    <li style="margin-bottom: 10px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="hi" name="lang_vb" formControlName="lang_vb" title="हिन्दी" value="hi">
+                        <label for="hi">हिन्दी</label></h5>  
+                    </li>
+
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="kn" name="lang_vb" formControlName="lang_vb" title="ಕನ್ನಡ" value="kn">
+                        <label for="kn">ಕನ್ನಡ</label></h5>  
+                    </li>   
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="ml" name="lang_vb" formControlName="lang_vb" title="മലയാളം" value="ml">
+                        <label for="ml">മലയാളം</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="mr" name="lang_vb" formControlName="lang_vb" title="मराठी" value="mr">
+                        <label for="mr">मराठी</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="pa" name="lang_vb" formControlName="lang_vb" title="ਪੰਜਾਬੀ" value="pa">
+                        <label for="pa">ਪੰਜਾਬੀ</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="ta" name="lang_vb" formControlName="lang_vb" title="தமிழ்" value="ta">
+                        <label for="ta">தமிழ்</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;"><h5 style="margin: 0px; color: black; font-weight: normal;" >
+                        <input type="radio" id="te" name="lang_vb" formControlName="lang_vb" title="తెలుగు" value="te">
+                        <label for="te">తెలుగు</label></h5>  
+                    </li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;">
+                        <button type="submit"    >
+                            {{label_submit_upload_ads_vb}}
+                        </button>
+                        <div *ngIf="doneFlag_vb" style="background-color: #8dce8f">
+                            <label>{{doneMsg_vb}}</label>
+                        </div>
+                        <div *ngIf="!doneFlag_vb" style="color: red">
+                            <label>{{doneMsg_vb}}</label>
+                        </div>
+                    </li>                            
+                </ul>
+            </div>
+            
+            
+        </form>
+    </div>
+
+</div>    
+
+    

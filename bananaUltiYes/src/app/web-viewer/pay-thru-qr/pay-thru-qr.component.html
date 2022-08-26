@@ -1,0 +1,88 @@
+<div class="toolbar" role="banner" >
+   
+    <!-- <label style="font-size:30px; word-spacing:100px; margin-top: 10px; margin-left: 10px;"> 
+        <toolbar-msg messageSeek_vb="ownerToolBar_heading_msg"></toolbar-msg></label> -->
+        <img src="/assets/images/appName.png" />
+    <label style="margin-top: 10px; margin-left: 10px;">
+        &nbsp;&nbsp;&nbsp; {{qrCodeScreen_heading_vb}}</label>
+    </div>
+    
+<div class="container">
+    <div class="control_display"></div>
+    
+    <div class="container1" >
+        
+            <div class="float-md-right" style="padding-right: 5px; display: inline-block;">
+                <div style="color: #444040; margin-left: 10px;">
+                <h1 style="margin-top: 10px; "  > {{twoStepsToPay_vb}}</h1>
+                </div> 
+                <ul style="list-style: none;">    
+                    <li style="margin-top: 10px;"><h3>{{step_1_to_pay_vb}}</h3></li>
+                    <li style="margin-bottom: 10px;margin-top: 0px;">
+                        <img src="/assets/images/qrAcc.jpeg" /> </li>
+                    <li style="margin-top: 2px;">
+                        <ul style="list-style: none;">  
+                            <li style="margin-top: 2px;">{{u_r_paying_to_vb}}</li>
+                            <li style="margin-top: 1px;margin-left: 5px;">{{bank_name_vb}}</li>
+                            <li style="margin-top: 0px;margin-left: 5px;">{{acc_no_vb}}</li>
+                        </ul> </li>
+                    <li style="margin-top: 10px;"><h3>{{step_2_to_pay_vb}}</h3></li>
+                    <li style="margin-bottom: 0px;margin-top: 0px;">
+                        <form [formGroup]="transactionForm_vb"  >
+                            <div >
+                                <div >
+                                    <div >
+                                    <span id="inputGroup-sizing-lg">
+                                        <b>{{phone_input_label_vb}}</b></span>
+                                    </div>
+                                    <input type="text" formControlName="ownerPhone_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div *ngIf="identifyPhoneValidator_vb">                    
+                                    <span  class="error_msg"
+                                        *ngIf="transactionForm_vb.controls['ownerPhone_vb'].getError('required')">
+                                        <pay-thru-qr-code-msg messageSeek_vb="required_email_phone_label_msg"></pay-thru-qr-code-msg>
+                                    </span>                                                       
+                                </div>
+                            </div>
+                            <div style="margin-top: 40px;">
+                                <div >
+                                    <div >
+                                    <span id="inputGroup-sizing-lg">
+                                        <b>{{transactionId_input_label_vb}}</b></span>
+                                    </div>
+                                    <input type="text" formControlName="transactionId_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div *ngIf="identifyTransIdValidator_vb">                    
+                                    <span  class="error_msg"
+                                        *ngIf="transactionForm_vb.controls['transactionId_vb'].getError('required')">
+                                        <pay-thru-qr-code-msg messageSeek_vb="required_transaction_id_label_msg"></pay-thru-qr-code-msg>
+                                    </span>                                                       
+                                </div>
+                            </div>
+                             <div *ngIf="success_vb" style="background-color: #166620; margin-top: 3px;">
+                                <label style="color: white;">{{transSubmitDone_vb}}</label>
+                             </div>
+                             <div *ngIf="!success_vb" style="color: red">
+                                <label>{{transSubmitDone_vb}}</label>
+                             </div>
+                        <button type="submit" (click)="transSubmit_mt()" style="margin-top: 10px;">
+                            {{submit_vb}}
+                        </button>
+                        </form>
+                        <!-- <div *ngIf="doneFlag_vb" style="background-color: #8dce8f">
+                            <label>{{doneMsg_vb}}</label>
+                        </div>
+                        <div *ngIf="!doneFlag_vb" style="color: red">
+                            <label>{{doneMsg_vb}}</label>
+                        </div> -->
+                    </li>                            
+                </ul>
+            </div>
+            
+            
+        
+    </div>
+
+</div>    
+
+    

@@ -1,0 +1,253 @@
+<!-- <p>owner-target-area works!</p> -->
+<app-owner-toolbar></app-owner-toolbar>
+
+<div class="container1"> 
+    <div class="listMyAdsHeading">
+        {{list_myads_heading_vb}}            
+    </div>
+        <form [formGroup]="ownerTargetAreaForm_vb" (ngSubmit)="onSubmit_mt()" >
+                <div class="tabContent">
+                    <div class="row spacing">
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" formControlName='identify_vb' name="identify_vb" id="phoneRadios_vb" value="phone"  (click)="activatePhoneContent_mt()" checked>
+                            <label class="form-check-label" for="phoneRadios">
+                                {{use_phone_auth_vb}}                               
+                            </label>
+                        </div>
+                        <div class="col form-check">
+                            <input class="form-check-input" type="radio" formControlName='identify_vb' name="identify_vb" id="emailRadios_vb" value="email"  (click)="activateEmailContent_mt()">
+                            <label class="form-check-label" for="emailRadios">
+                                {{use_email_auth_vb}}
+                            </label>
+                        </div>           
+                    </div>
+                    <div class="form-group" *ngIf="togglePhoneActive_vb">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">
+                                {{phone_input_label_vb}}</span>
+                            </div>
+                            <input type="text"  formControlName="ownerPhone_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div *ngIf="identifyPhoneValidator_vb">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerTargetAreaForm_vb.controls['ownerPhone_vb'].getError('required')">
+                                <list-my-ad-msg messageSeek_vb="required_email_phone_label_msg"></list-my-ad-msg>
+                            </span>                                                       
+                        </div>
+                    </div>
+                    <div class="form-group" *ngIf="!togglePhoneActive_vb">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">
+                                {{email_input_label_vb}}</span>
+                            </div>
+                            <input type="text" formControlName="ownerEmail_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div *ngIf="identifyEmailValidator_vb">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerTargetAreaForm_vb.controls['ownerEmail_vb'].getError('required')">
+                                <list-my-ad-msg messageSeek_vb="required_email_phone_label_msg"></list-my-ad-msg>
+                            </span>                                                       
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">
+                                {{secretNum_input_label_vb}}</span>
+                            </div>
+                            <input type="password"  formControlName="secretNumber_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div *ngIf="secretNumberValidator_vb">                    
+                            <span class="text-danger alert-danger"
+                                *ngIf="ownerTargetAreaForm_vb.controls['secretNumber_vb'].getError('required')">
+                                <list-my-ad-msg messageSeek_vb="required_label_msg"></list-my-ad-msg>
+                            </span>                                                
+                        </div>
+                    </div> 
+    
+                    <div width="150px" *ngIf="!authorizeDone_vb">
+                        <button type="button" (click)="loadAllMyAds_mt()" class="btn btn-primary">
+                             {{load_my_ads_label_vb}}</button>   
+                        <div style="padding:20px;"><p style="padding:5px; font-size: 14px;">{{awaitingAuthorizeMsg_vb}}
+                
+                        </p>
+                            <!-- <h1><common-cl-msg messageSeek="{{awaitingAuthorizeMsg_vb}}"></common-cl-msg></h1> -->
+                        </div>
+                    </div> 
+        </form>     
+<!-- 
+        <div class="row list-header" *ngIf="authorizeDone">
+                <div class="col-xs-1 col-sm-1">
+                  <h3><list-my-ad-msg messageSeek_vb="th_heading_col1"></list-my-ad-msg></h3>
+                  
+                </div>
+                <div class="col-xs-2 col-sm-2">
+                  <h3><list-my-ad-msg messageSeek_vb="th_heading_col2"></list-my-ad-msg></h3>
+                </div>
+                <div class="col-xs-2 col-sm-2">
+                    <h3><list-my-ad-msg messageSeek_vb="th_heading_col3"></list-my-ad-msg></h3>
+                  </div>
+                <div class="col-xs-6 col-sm-6">
+                  <h3><list-my-ad-msg messageSeek_vb="th_heading_col4"></list-my-ad-msg></h3>                  
+                </div>
+                <div class="col-xs-1 col-sm-1">
+                        <h3><list-my-ad-msg messageSeek_vb="th_heading_col5"></list-my-ad-msg></h3>
+                </div>
+        </div> -->
+        <!--Card View start-->
+           
+
+        <div *ngIf="authorizeDone_vb" style="border: 1px solid rgb(216, 212, 219); padding: 5px;">            
+          <div *ngFor="let myAd_vb of myAdsDto_vb let i_vb=index" style="align-items: center;border: 4px solid rgb(119, 15, 93)">
+            <div class="row" *ngIf="myAd_vb.p7==1">  <!--Display 1-->
+                <div class="col-sm-6">
+                    <div *ngIf="myAd_vb.p7==1" class="card300">  <!--Display 1-->
+                    <div width="300px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">                
+                        <!-- <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+                            Business Name</label>
+                        <label class="disType1_BageImg" style="font-size: 10px ;">Icon</label>             -->
+                    </div>
+                        <img src="{{myAd_vb.imageToShow_vb}}" width="300px" height="300px"  (click)=sendGetReq_mt(i_vb)/>        
+                        <div width="300px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+                        <div>
+                        <img src="/assets/tryl.png" style="display: inline-block; margin-left: 12px; vertical-align: middle;" />
+                        <img src="/assets/tryl.png" class="disType1_BageImg" />
+                        
+                        </div>
+                        <!-- <div class="card-footer">
+                            <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                        </div>                        -->
+                    </div>  
+                    <div width="300px" >                  
+                            <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>                 
+                            <!-- <div class="card-footer">
+                                
+                                <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                            
+                            </div>                        -->
+                    </div>           
+                </div>
+                </div>
+                <div class="col-sm-6">
+                    <label>{{status_on_label_vb}} {{messageList_vb.status_vb[myAd_vb.p3]}}</label><br/>
+                    <label>{{active_date_label_vb}} {{myAd_vb.p6 | date: 'MMM d, y, h:mm a' }}</label>   <br/>                 
+                    <label>{{ad_type_label_vb}} {{messageList_vb.adType_vb[myAd_vb.p5]}}</label><br/><br/>
+                    <label>{{created_on_label_vb}} {{myAd_vb.p4 | date: 'MMM d, y, h:mm a' }}</label> <br/>
+                    <label>{{active_date_label_vb}} {{myAd_vb.p6 | date: 'MMM d, y, h:mm a' }}</label>   <br/>                 
+
+                        <button type="button" class="btn btn-primary" [routerLink]="['/callOwner/',apiKeyDto_vb.apikey_vb,'a','listMyAds','owner','upload','modify',apiKeyDto_vb.apikey_vb,myAd_vb.p1]" 
+                        style="margin: 5px;">Edit/Modify</button>                    
+                </div>               
+            </div>
+            <div class="row" *ngIf="myAd_vb.p7==2">  <!--Display 2-->
+                <div class="col-md-6">
+                    <div *ngIf="myAd_vb.p7==2" class="card500">  <!--Display 1-->
+                        <div width="500px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+                            
+                            <!-- <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+                                Business Name</label>
+            
+                            <label class="disType1_BageImg" style="font-size: 10px ;">Icon</label> -->
+                        </div>
+                            <img src="{{myAd_vb.imageToShow_vb}}" width="500px" height="500px"  (click)=sendGetReq_mt(i_vb)/>        
+                            <div width="500px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+                            <div  >
+                            <img src="/assets/tryl.png" style="display: inline-block; margin-left: 12px; vertical-align: middle;" />
+                            <img src="/assets/tryl.png" class="disType2_BageImg" />
+                            
+                            </div>
+                            <!-- <div class="card-footer">
+                                <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                            </div>                        -->
+                        </div>              
+                            <div width="500px">
+                            
+                                <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>
+                                
+                                <!-- <div class="card-footer">
+                                    <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                                </div>                        -->
+                            </div>                             
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label>{{status_on_label_vb}} {{messageList_vb.status_vb[myAd_vb.p3]}}</label><br/>
+                    <label>{{active_date_label_vb}} {{myAd_vb.p6 | date: 'MMM d, y, h:mm a' }}</label>   <br/>                  
+                    <label>{{ad_type_label_vb}} {{messageList_vb.adType_vb[myAd_vb.p5]}}</label><br/><br/>
+                    <label>{{created_on_label_vb}} {{myAd_vb.p4 | date: 'MMM d, y, h:mm a' }}</label> <br/>
+                    
+                    <button type="button" class="btn btn-primary" [routerLink]="['/callOwner/',apiKeyDto_vb.apikey_vb,'a','listMyAds','owner','upload','modify',apiKeyDto_vb.apikey_vb,myAd_vb.p1]" 
+                            style="margin: 5px;">Edit/Modify</button>
+                </div>
+            </div>
+            <div class="row" *ngIf="myAd_vb.p7==3">  <!--Display 3-->
+                <div class="col-lg-6">
+                    <div *ngIf="myAd_vb.p7==3" class="card650">  <!--Display 1-->       
+                        <div width="650px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+    
+                            <!-- <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+                                Business Name</label>
+    
+                            <label class="disType1_BageImg" style="font-size: 10px ;">Icon</label> -->
+                        </div>     
+                            <img src="{{myAd_vb.imageToShow_vb}}" width="650px" height="650px"  (click)=sendGetReq_mt(i_vb)/>        
+                            <div width="650px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+                                <div  >      
+                                    <img src="/assets/tryl.png" style="display: inline-block; margin-left: 12px; vertical-align: middle;" />
+                                    
+                                    <img src="/assets/tryl.png" class="disType3_BageImg" />                    
+                                </div>
+                                <!-- <div class="card-footer">
+                                    <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                                </div>                        -->
+                            </div>
+                            <div width="650px" >                   
+                                <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>
+            
+                                <!-- <div class="card-footer">
+                                    <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                                </div>                        -->
+                            </div>                                      
+                    </div>
+                </div>
+                <div class="col-lg-6" style="padding-left:200px ;">
+                    <label>{{status_on_label_vb}} {{messageList_vb.status_vb[myAd_vb.p3]}}</label><br/>
+                    <label>{{active_date_label_vb}} {{myAd_vb.p6 | date: 'MMM d, y, h:mm a' }}</label>   <br/>            
+                    <label>{{ad_type_label_vb}} {{messageList_vb.adType_vb[myAd_vb.p5]}}</label><br/><br/>
+                    <label>{{created_on_label_vb}} {{myAd_vb.p4 | date: 'MMM d, y, h:mm a' }}</label> <br/>
+                    
+                    <button type="button" class="btn btn-primary" [routerLink]="['/callOwner/',apiKeyDto_vb.apikey_vb,'a','listMyAds','owner','upload','modify',apiKeyDto_vb.apikey_vb,myAd_vb.p1]" 
+                            style="margin: 5px;">Edit/Modify </button>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div *ngFor="let myAd of myAdsDto let i=index"  >  
+            <div class="row list-content-shade1"  >
+                <div class="col-xs-1 col-sm-1">
+                    {{i+1}}    
+                </div>
+                <div class="col-xs-2 col-sm-2">
+                    <label><list-my-ad-msg messageSeek_vb="ad_type_label"></list-my-ad-msg>{{messageList.adType[myAd.adType]}}</label><br/><br/><br/>
+                    <label><list-my-ad-msg messageSeek_vb="ad_image_label"></list-my-ad-msg>{{myAd.uploadedFileName}}</label>
+                    <label><list-my-ad-msg messageSeek_vb="created_on_label"></list-my-ad-msg>{{myAd.createdOn | date: 'MMM d, y, h:mm a' }}</label>
+                    <label><list-my-ad-msg messageSeek_vb="status_on_label"></list-my-ad-msg>{{messageList.status[myAd.status]}}</label>                    
+                </div>
+                <div class="col-xs-2 col-sm-2">
+                    <label style="white-space: pre-wrap;"> {{myAd.contentDesc}}</label>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                        <img src="{{myAd.imageToShow}}" width="300px" height="300px" (click)=sendGetReq(i) />
+                </div>
+                <div class="col-xs-2 col-sm-2" (click)="showEditUploadScreen(myAd.id)">   
+                    <button type="button" class="btn btn-light" [routerLink]="['owner/upload/modify/',myAd.id]" 
+                            style="margin: 5px;">edit id={{myAd.id}}</button>
+                </div>
+            </div>     
+        </div> --> 
+
+</div>

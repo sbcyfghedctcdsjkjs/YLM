@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: auto;
+    flex-wrap: wrap;
+    border: 0px #111 solid;
+}
+
+.container div{
+    padding: 1px;
+    /* border: 2px #111 solid; */
+}
+
+.box1{
+    flex: 1;
+}
+
+.box2{
+    flex: 1;
+}
+
+.box3{
+    flex: 1;
+}
+
+.box4{
+    flex: 1;
+}
+
+.box5{
+    flex: 1;
+}

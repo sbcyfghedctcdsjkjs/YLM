@@ -1,0 +1,116 @@
+<!-- <p>owner-target-area works!</p> -->
+<app-owner-toolbar></app-owner-toolbar>
+
+<div class="container1"  > 
+        <div class="uploadStep2Heading">
+            {{TargetArea_step2_heading_vb}}            
+        </div>
+        <h3  class="successMsg">
+            <common-cl-msg messageSeek_vb="{{msgFromUpload_vb}}"></common-cl-msg>
+        </h3>
+        <!-- <h3  class="successMsg">{{initDone}}</h3> -->
+
+        <form [formGroup]="ownerTargetAreaForm_vb" (ngSubmit)="onSubmit_mt()" >
+            <div class="tabContent">
+                <div class="row spacing">
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" formControlName='identify_vb' name="identify_vb" id="phoneRadios" value="phone"  (click)="activatePhoneContent_mt()" checked>
+                        <label class="form-check-label" for="phoneRadios">
+                            {{use_phone_auth_vb}}
+                        </label>
+                    </div>
+                    <div class="col form-check">
+                        <input class="form-check-input" type="radio" formControlName='identify_vb' name="identify_vb" id="emailRadios" value="email"  (click)="activateEmailContent_mt()">
+                        <label class="form-check-label" for="emailRadios">
+                            {{use_email_auth_vb}}
+                        </label>
+                    </div>           
+                </div>
+                <div class="form-group" *ngIf="togglePhoneActive_vb">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">{{phone_input_label_vb}}</span>
+                        </div>
+                        <input type="text"  formControlName="ownerPhone_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div *ngIf="identifyPhoneValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerTargetAreaForm_vb.controls['ownerPhone_vb'].getError('required')">
+                            <targetarea-msg messageSeek_vb="required_email_phone_label_msg"></targetarea-msg>
+                        </span>                                                       
+                    </div>
+                </div>
+                <div class="form-group" *ngIf="!togglePhoneActive_vb">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">{{email_input_label_vb}}</span>
+                        </div>
+                        <input type="text" formControlName="ownerEmail_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div *ngIf="identifyEmailValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerTargetAreaForm_vb.controls['ownerEmail_vb'].getError('required')">
+                            <targetarea-msg messageSeek_vb="required_email_phone_label_msg"></targetarea-msg>
+                        </span>                                                       
+                    </div>
+                </div>
+            </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">{{secretNum_input_label_vb}}</span>
+                        </div>
+                        <input type="password"  formControlName="secretNumber_vb" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div *ngIf="secretNumberValidator_vb">                    
+                        <span class="text-danger alert-danger"
+                            *ngIf="ownerTargetAreaForm_vb.controls['secretNumber_vb'].getError('required')">
+                            <targetarea-msg messageSeek_vb="required_label_msg"></targetarea-msg>
+                        </span>                                                
+                    </div>
+                </div> 
+
+                <div width="150px" *ngIf="!authorizeDone_vb">
+                    <button type="button" (click)="loadAllTargetArea_mt()" class="btn btn-primary">{{load_ta_label_vb}}</button>   
+                    <div style="padding:20px;"><p style="padding:5px; font-size: 14px;">{{awaitingTargetArea_vb}}
+                    </p></div>
+                </div> 
+                <!-- start target array-->
+        <table class="table table-bordered" formArrayName="targets_vb" *ngIf="authorizeDone_vb">
+            <tr>  
+            <th class="trgtHeader" width="150px">
+                <h3 >{{ta_heading_vb}}</h3>
+            </th>      
+            <th colspan="2">{{sample_address_syntax_vb}} <br/>
+                {{sample_address_start_vb}}<br/>
+                {{sample_address_1_vb}}<br/>
+                {{sample_address_2_vb}}<br/>
+                {{sample_address_3_vb}}<br/> 
+                {{sample_address_4_vb}}<br/>   
+                </th>
+            </tr>      
+            <tr *ngFor="let p14 of targetsArray_mt().controls; let i_vb=index" [formGroupName]="i_vb" >      
+            <td colspan="2">      
+                <div>{{address_label_part1_vb}} {{i_vb+1}} {{address_label_part2_vb}} </div>
+                <input type="text" formControlName="p14" class="form-control">      
+            </td>      
+            <td>
+                <button (click)="removeTarget_mt(i_vb)" class="btn btn-danger"> {{remove_label_vb}}</button>      
+            </td>      
+            </tr>            
+            <tr>      
+                <td colspan="2"></td>      
+                <td width="150px">
+                    <button type="button" (click)="addTarget_mt('')" class="btn btn-primary">{{add_targetarea_label_vb}}</button>   
+                </td>      
+                </tr>
+        </table>
+
+        <div *ngIf="authorizeDone_vb">
+            <button type="submit" class="btn btn-secondary">{{label_submit_targetarea_vb}}<br/></button>
+            <div style="padding:20px;" class="successMsg" ><p style="padding:5px; font-size: 14px;">{{awaitingSaveTargetArea_vb}}
+                
+                </p></div>
+        </div>
+        </form>
+</div>

@@ -1,0 +1,88 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+  div.scrollmenu {
+    background-color: #fefffd;
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;  }
+
+    
+  .toolbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #9bd219;
+    color: white;
+    font-weight: 600;
+    z-index: 12; 
+  }
+  
+  .buttonBar {
+    position: fixed; 
+    background-color: #fcfcfc;
+    height: 50px;
+    top: 50px;
+    width: 100%;
+    
+    align-items: center;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin-bottom: 30px;
+    z-index: 11; 
+  }
+  
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .sidenavHamburger{
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  /* @media screen and (max-width: 850px) {
+    .sidenavHamburger{
+      font-size: 30px;
+      cursor: default;
+      margin-left: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .sidenavHamburger{
+      font-size: 20px;
+      cursor: default;
+      margin-left: 6px;
+    }
+  }
+
+  @media screen and (max-width: 18000px) {
+    .sidenavHamburger{
+      font-size: 20px;
+      cursor: default;
+      margin-left: 100px;
+    }
+  }   */
+
+
+  
+
+
+
+ 
+  

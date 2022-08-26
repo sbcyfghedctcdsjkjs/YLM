@@ -1,0 +1,186 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+    <div class="control_display"><app-viewer-sidenav></app-viewer-sidenav></div>
+    
+    <div *ngIf="!searchDone_vb" class="container1"  style="border: 0px solid rgb(216, 212, 219); padding: 5px;">            
+      <div *ngFor="let myAd_vb of myAdsDto_vb let i_vb=index" style="align-items: center;border: 0px solid rgb(119, 15, 93)">
+        <div *ngIf="myAd_vb.p7==1" class="card300">  <!--Display 1-->
+             <!-- <div width="300px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">                
+                <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+                    </label>
+                <label class="disType1_BageImg" style="font-size: 10px ;"></label>            
+             </div> -->
+              <img src="{{myAd_vb.imageToShow_vb}}" width="300px" height="300px" />        
+              <div width="300px"  style="border: 0px solid #bfc1c4">
+                <div>
+                <img *ngIf="myAd_vb.p21" src="/assets/fav.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;" (click)="favClicked_mt(i_vb)"/>
+                <img *ngIf="!myAd_vb.p21" src="/assets/fav-border.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;"  (click)="favClicked_mt(i_vb)"/>
+                <img src="/assets/turned_in.svg" class="disType1_BageImg" />
+                
+                </div>
+                <!-- <div *ngIf="showLoginRequiredMsg_vb">                   
+                    <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;color: red;" >
+                        {{login_required_msg_vb}}</label>
+                </div>         -->
+                <!-- <div class="card-footer">
+                    <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                </div>                        -->
+            </div>  
+            <div width="300px" >                  
+                  <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>                 
+                  <!-- <div class="card-footer">
+                      
+                      <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                  
+                    </div>                        -->
+            </div>           
+        </div>
+
+        <div *ngIf="myAd_vb.p7==2" class="card500">  <!--Display 1-->
+            <!-- <div width="500px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+               
+                <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+                    </label>
+
+                <label class="disType1_BageImg" style="font-size: 10px ;"></label>
+             </div> -->
+              <img src="{{myAd_vb.imageToShow_vb}}" width="500px" height="500px" />        
+              <div width="500px" style="border: 0px solid #bfc1c4">
+                <div  >
+                    <img *ngIf="myAd_vb.p21" src="/assets/fav.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;" (click)="favClicked_mt(i_vb)"/>
+                    <img *ngIf="!myAd_vb.p21" src="/assets/fav-border.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;"  (click)="favClicked_mt(i_vb)"/>
+                    <img src="/assets/turned_in.svg" class="disType2_BageImg" />
+                
+                </div>
+                <!-- <div *ngIf="showLoginRequiredMsg_vb">            
+                    <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;color: red;" >
+                        {{login_required_msg_vb}}</label>
+                </div> -->
+                <!-- <div class="card-footer">
+                    <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                </div>                        -->
+            </div>              
+              <div width="500px">
+                 
+                  <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>
+                  
+                  <!-- <div class="card-footer">
+                      <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                  </div>                        -->
+              </div>
+                       
+        </div>
+        <div *ngIf="myAd_vb.p7==3" class="card650">  <!--Display 1-->       
+            <!-- <div width="650px" class="bottomFavIcon" style="border: 1px solid #bfc1c4">
+               
+                <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;" >
+              
+                    </label>
+                <label class="disType1_BageImg" style="font-size: 10px ;"></label>
+
+            </div>      -->
+                <img src="{{myAd_vb.imageToShow_vb}}" width="650px" height="650px" />        
+                <div width="650px"  style="border: 0px solid #bfc1c4">
+                    <div  >
+                        <img *ngIf="myAd_vb.p21" src="/assets/fav.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;" (click)="favClicked_mt(i_vb)"/>
+                        <img *ngIf="!myAd_vb.p21" src="/assets/fav-border.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;"  (click)="favClicked_mt(i_vb)"/>
+                        
+                        <img src="/assets/turned_in.svg" class="disType3_BageImg" />                    
+                    
+                    </div>
+                    <!-- <div *ngIf="showLoginRequiredMsg_vb">               
+                        <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;color: red;" >
+                           {{login_required_msg_vb}}</label>
+                    </div> -->
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                    </div>                        -->
+                </div>
+                <div width="650px" >                   
+                    <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>
+
+                    <!-- <div class="card-footer">
+                        <small class="text-muted">{{myAd_vb.createdOn_vb | date: 'MMM d, y, h:mm a' }}</small>
+                    </div>                        -->
+                </div>
+                                
+         </div>
+
+    </div>    
+    <div class="noResultFound"><viewer-screen-msg messageSeek_vb="{{awaitingSearchMsg_vb}}"></viewer-screen-msg>{{awaitingSearchMsg_vb}}</div>
+    </div>
+
+    <div *ngIf="searchDone_vb" class=""  style=" opacity: .99;border: 0px solid rgb(216, 212, 219); padding: 5px;">
+        <p>Products</p>
+        <!-- <div class="nav row" style="position: absolute;">
+            <div class="col">1</div><div class="col">2</div><div class="col">3</div>
+            <div class="col">4</div><div class="col">5</div><div class="col">6</div>
+            <div class="col">7</div><div class="col">8</div><div class="col">9</div>
+            <div class="col">10</div><div class="col">11</div><div class="col">12</div>
+        </div>
+        <div class="nav row">
+            <div class="col-4">1</div><div class="col-4">2</div><div class="col-4">3</div>
+            <div class="col-4">1</div><div class="col-4">2</div><div class="col-4">3</div>
+        </div> -->
+        
+        <div class="nav row">
+            <span *ngFor="let myAd_vb of myAdsDto_vb let i_vb=index" style="margin: 0px;">
+                <div class="col-3"> 
+                <div class="card250">  <!--Display 1-->
+                    <img src="{{myAd_vb.imageToShow_vb}}" width="250px" height="250px" />        
+                    <div width="250px"  style="border: 0px solid #bfc1c4">
+                        <div>
+                            <img *ngIf="myAd_vb.p21" src="/assets/fav.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;" (click)="favClicked_mt(i_vb)"/>
+                            <img *ngIf="!myAd_vb.p21" src="/assets/fav-border.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;"  (click)="favClicked_mt(i_vb)"/>
+                            <img src="/assets/turned_in.svg" class="disTypePrd_BageImg" />
+                        </div>                    
+                    </div>  
+                    <div width="250px" >                  
+                        <p class="card-text prod_price_para overflow-wrap" >
+                            {{currency_msg_vb}} 2300  </p>                      
+                    </div>
+                    <div *ngIf="myAd_vb.p23" width="250px">               
+                        <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;color: red;margin-left: 15px;" >
+                           {{login_required_msg_vb}}</label>
+                    </div>
+                    <div width="250px" >   
+                        <button *ngIf="myAd_vb.p22==null" type="button" (click)="addToCart_mt(1,i_vb)" class="btn btn-light" style="align-self: stretch; margin-left: 5px;background-color: #64b5f6;">
+                            {{buy_prod_msg_vb}}</button>  
+                        <!-- <button *ngIf="myAd_vb.p22==2" type="button" (click)="orderplaced_mt(2,i_vb)" class="btn btn-light" style="align-self: stretch; margin-left: 5px;background-color: #2ac9c6;">
+                            {{orderConfirm_msg_vb}}</button> -->
+                        <label *ngIf="myAd_vb.p22==3" (click)="orderplaced_mt(3,i_vb)" style="align-self: stretch; padding: 5px;color: #f6faf6;background-color: #388645;">
+                            {{in_cart_msg_vb}}</label>
+                        <!-- <a *ngIf="myAd_vb.p22==3" class="link" style="margin-left: 3em;"  [routerLink]="['/xskdihhsdowqi2423156471hviwerocw017ewg1632jvhq2/cart/',apiKeyDto_vb.apikey_vb,userDto_vb.userId_vb]" >
+                            {{go_to_cart_msg_vb}}</a> -->
+                        <!-- <label *ngIf="myAd_vb.p22==3" (click)="gotoCart_mt(3,i_vb)" style="align-self: stretch; margin-left: 15px;color: #2f8fdf;">
+                            {{go_to_cart_msg_vb}}</label> -->
+                    </div> 
+                    <div *ngIf="myAd_vb.p22==4" width="250px" style="color: #2f8fdf;" >                  
+                        <label class="rusureDelete_para">{{ru_sureDelete_msg_vb}}</label>                      
+                        <button type="button" (click)="orderplaced_mt(1,i_vb)" class="btn btn" style="align-self: stretch; margin: 0px;color: #2f8fdf;">
+                          {{dontDelete_msg_vb}}</button>
+                        <button type="button" (click)="orderDeleteConfirm_mt(4,i_vb)" class="btn btn" style="align-self: stretch; margin: 0px;color: #2f8fdf;">
+                          {{confirmRemove_msg_vb}}</button>
+                    </div>  
+                    <div width="250px" >                  
+                        <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>                      
+                    </div>        
+                </div>
+                </div>
+            </span> 
+        </div>   
+        
+    </div>
+    <div *ngIf="!searchDone_vb" class="container1"  style="border: 0px solid rgb(216, 212, 219); padding: 5px;">
+        <app-promotion-page1></app-promotion-page1>
+    </div>  
+  
+</div>
+  
+    <div style="display: none;"
+    class="search-results"
+    infinite-scroll
+    [infiniteScrollDistance]="1"
+    [infiniteScrollThrottle]="10000"
+    (scrolled)="onScroll_mt()"
+    ></div>

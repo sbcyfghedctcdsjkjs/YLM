@@ -1,0 +1,14 @@
+4 kind of ads full year, we are bringing household daily need items offers to you
+#zorads.
+api key,
+languages
+Name above image and Thumbnail image
+I get rich very soon
+Make instant ads link and Weekend Link active
+Keep the impressions count
+
+Card draw in between ads #done
+decrease the size of image
+Create badges for ad-type(weeklyads, yearly ads,)
+create daily update script for updating impressions count
+create java code and make it run after every 2 minutes to compress the images

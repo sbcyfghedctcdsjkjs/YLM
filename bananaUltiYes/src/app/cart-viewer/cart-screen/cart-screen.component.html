@@ -1,0 +1,152 @@
+<!-- <p>cart-screen works!</p> -->
+<app-cart-toolbar></app-cart-toolbar>
+<div style="margin-top: 100px;margin-left: 2px;margin-right: 1px;">
+  
+    <div class="cart-prod">
+        <div class=""  style=" opacity: .99;border: 0px solid rgb(216, 212, 219); padding: 5px;">
+            <p class="cartHeading">Cart</p>
+            <!-- <div class="nav row" style="position: absolute;">
+                <div class="col">1</div><div class="col">2</div><div class="col">3</div>
+               
+                <div class="col">4</div><div class="col">5</div><div class="col">6</div>
+                <div class="col">7</div><div class="col">8</div><div class="col">9</div>
+                <div class="col">10</div><div class="col">11</div><div class="col">12</div>
+            </div>
+            <div class="nav row">
+                <div class="col-4">1</div><div class="col-4">2</div><div class="col-4">3</div>
+                <div class="col-4">1</div><div class="col-4">2</div><div class="col-4">3</div>
+            </div> -->
+            
+            <p *ngIf="emptyCart_vb" class="cartCongMsg" >This cart is empty.</p>
+            <div *ngIf="!emptyCart_vb" class="nav row">
+                <span *ngFor="let myAd_vb of myAdsDto_vb let i_vb=index" style="margin: 0px;">
+                    <div class="col-3" *ngIf="myAd_vb.p22!=100  && i_vb < myAdsDto_vb.length -1"> 
+                    <div class="card250">  <!--Display 1-->
+                        <img src="{{myAd_vb.imageToShow_vb}}" width="250px" height="250px" />        
+                        <div width="250px"  style="border: 0px solid #bfc1c4">
+                            <div>
+                                <!-- <img *ngIf="myAd_vb.p21" src="/assets/fav.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;" (click)="favClicked_mt(i_vb)"/>
+                                <img *ngIf="!myAd_vb.p21" src="/assets/fav-border.svg" style="display: inline-block; margin-left: 12px; vertical-align: middle;"  (click)="favClicked_mt(i_vb)"/> -->
+                                <img src="/assets/turned_in.svg" class="disTypePrd_BageImg" style="display: inline-block; margin-left: 18px;"/>
+                            </div>                    
+                        </div>  
+                        <div width="250px" >                  
+                            <p class="card-text prod_price_para overflow-wrap" >
+                                {{currency_msg_vb}} {{myAd_vb.p10}} / {{myAd_vb.p11}}  </p>                      
+                        </div>
+                        <div width="250px" >                  
+                            <p class="card-text prod_price_para overflow-wrap" >
+                                Quantity:<button type="button" (click)="addToCart_mt(3,i_vb)" class="btn btn-light" style="align-self: stretch; margin-left: 5px;background-color: #64b5f6;">
+                                    -</button>{{myAd_vb.p15}}<button type="button" (click)="addToCart_mt(1,i_vb)" class="btn btn-light" style="align-self: stretch; margin-left: 5px;background-color: #64b5f6;">
+                                    +</button></p>                      
+                        </div>
+                        <div *ngIf="myAd_vb.p23" width="250px">               
+                            <label  style="display: inline-block;  vertical-align: middle; font-size: 10px ;color: red;margin-left: 15px;" >
+                               {{login_required_msg_vb}}</label>
+                        </div>
+                        <div width="250px" >   
+                            <label *ngIf="myAd_vb.p22==null && cartStatus_vb!='confirm_fx'" (click)="orderDelete_mt(3,i_vb)" style="align-self: stretch; margin-left: 15px;color: #2f8fdf;">
+                                {{orderRemove_msg_vb}}</label>
+                        </div> 
+                        <div *ngIf="myAd_vb.p22==4" width="250px" style="color: #2f8fdf;" >                  
+                            <label class="rusureDelete_para">{{ru_sureDelete_msg_vb}}</label>                      
+                            <button type="button" (click)="dontDelete_mt(2,i_vb)" class="btn btn" style="align-self: stretch; margin: 0px;color: #2f8fdf;">
+                              {{dontDelete_msg_vb}}</button>
+                            <button type="button" (click)="orderDeleteConfirm_mt(4,i_vb)" class="btn btn" style="align-self: stretch; margin: 0px;color: #2f8fdf;">
+                              {{confirmRemove_msg_vb}}</button>
+                        </div>  
+                        <div width="250px" >                  
+                            <p class="card-text para_view1 overflow-wrap" >{{myAd_vb.p2}}</p>                      
+                        </div>        
+                    </div>
+                    </div>
+                </span> 
+            </div>   
+            
+        </div>
+
+        
+    </div>
+    <div class="cart-prod-value" >
+        
+        <table style="margin-left: 50px;border-bottom: 1em; border-color: black; background-color: #f5ffff;">
+            <tr>
+                <td colspan="3"><div id="cart-value-heading" style="background-color: #f5ffff;">Pay (₹)</div></td>
+            
+            </tr>
+            <tr>
+
+                <td><div class="cost-div-desc">Cart Cost:</div></td>
+                <td style="padding-left: 3em;"><div class="total-cart-value">{{myAdsDto_vb[myAdsDto_vb.length-1].p1}}</div></td>
+                <td style="padding-left: .5em;"><div class="total-cart-value">.{{myAdsDto_vb[myAdsDto_vb.length-1].p2}}</div></td>
+            </tr>
+            <tr>
+                <td><div class="cost-div-desc"></div></td>
+                <td style="padding-left: 3em;"><div class="total-cart-value">0</div></td>
+                <td style="padding-left: .5em;"><div class="total-cart-value">.00</div></td>
+            </tr>
+            <tr>
+                <td><div class="cost-div-desc"></div></td>
+                <td style="padding-left: 3em;"><div class="total-cart-value">0</div></td>
+                <td style="padding-left: .5em;"><div class="total-cart-value">.00</div></td>
+            </tr>
+            <tr>
+                <td><div class="cost-div-desc"></div></td>
+                <td style="padding-left: 3em;"><div class="total-cart-value">0</div></td>
+                <td style="padding-left: .5em;"><div class="total-cart-value">.00</div></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-top: 2em;"></td>
+            </tr>
+            <tr>
+                <td><div class="cost-div-desc">Total Cost**:</div></td>
+                <td style="padding-left: 3em;"><div class="total-cart-value">{{myAdsDto_vb[myAdsDto_vb.length-1].p1}}</div></td>
+                <td style="padding-left: .5em;"><div class="total-cart-value">.{{myAdsDto_vb[myAdsDto_vb.length-1].p2}}</div></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="padding-top: 2em;">
+                    <label *ngIf="!refreshCart_vb" (click)="cartOrderConfirm_mt('confirm_fx')" class="btn" style="align-self: right; margin: 0px;color: #f8f8f8;background-color: #2f8fdf;">
+                         Confirm Order </label>
+                    <a *ngIf="refreshCart_vb" class="link"  [routerLink]="['/xskdihhsdowqi2423156471hviwerocw017ewg1632jvhq2/cart/',apiKeyDto_vb.apikey_vb,userDto_vb.userId_vb]" target="_blank">
+                         Refresh Cost</a>    
+                </td>
+            </tr>
+        </table>
+        <div id="cart-value-heading" style="background-color: #f5ffff; padding-top: 2em;">Important Instructions:</div>
+
+        <div class="instrutions-desc" style="background-color: #f5ffff;">
+            <ul>
+                <li>**Delivery charges (if Applicable) is additional to total cost.</li>
+                <li>Delivery of purchase items is taken care by either Seller OR Buyer.</li>
+                <li>Product shown is presentation purpose only, actual products can differ.</li>         
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

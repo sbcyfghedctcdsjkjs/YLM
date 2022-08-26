@@ -1,0 +1,136 @@
+<app-toolbar></app-toolbar>
+<div class="container1">
+    <div  class="register-form-adj">       
+        <!-- <h1 style="margin-top: 0px;">{{register_app_desc_1_vb}} </h1>
+        <h4 style="margin: 5px;margin-left: 200px;">{{register_app_desc_2_vb}} </h4>
+        <h5 style="margin: 50px;">{{register_app_desc_3_vb}}</h5>
+        <h5 style="margin: 50px;">{{register_app_desc_4_vb}}</h5>
+        <h5 style="margin: 50px;">{{register_app_desc_5_vb}}</h5>
+        <h5 style="margin: 50px;">{{register_app_desc_6_vb}}</h5>
+        <h5 style="margin: 50px;">{{register_app_desc_7_vb}}</h5> -->
+
+        <p style="font-size:100px;color:rgb(30, 144, 255)">{{register_app_desc_1_vb}}</p>
+            <ul>
+                <li>{{register_app_desc_3_vb}}</li>
+                <li>{{register_app_desc_4_vb}}</li>
+                <li>{{register_app_desc_5_vb}}</li>
+                <!-- <li>{{register_app_desc_6_vb}}</li>
+                <li>{{register_app_desc_7_vb}}</li> -->
+            </ul>
+    </div>
+
+
+        <div class="register-form">
+            <form [formGroup]="registerForm_vb" (ngSubmit)="onSubmit_mt()" >
+                <div class="container">
+                   <div >
+                       <!-- <div style="margin-bottom: 10px;">
+                           <div style="display: inline-block; margin-right: 20px;">
+
+                               <input  type="radio" name="identify_vb" id="phoneRadios" value="phone"  (click)="activatePhoneContent_mt()" checked>
+                               <label for="identify_vb"><b>
+                                   <registerScreen-msg messageSeek_vb="use_phone_auth"></registerScreen-msg></b>
+                               </label>
+                           </div>
+                           <div style="display: inline-block">
+                               <input  type="radio" name="identify_vb" id="emailRadios" value="email"  (click)="activateEmailContent_mt()">
+                               <label for="identify_vb">
+                                   <b><registerScreen-msg messageSeek_vb="use_email_auth"></registerScreen-msg></b>
+                               </label>
+                           </div>           
+                       </div> -->
+                      
+
+
+                       <div  >
+                           <div >
+                               <div >
+                               <span id="inputGroup-sizing-lg">
+                                <b>{{phone_input_label_vb}}</b></span>
+                               </div>
+                               <input type="text" formControlName="ownerPhone_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                           </div>
+                          
+                       </div>
+
+                       <div>
+                           <label>{{or_vb}}</label>
+                       </div>
+
+                       <div >
+                           <div>
+                               <div >
+                               <span id="inputGroup-sizing-lg"><b>{{email_input_label_vb}}</b></span>
+                               </div>
+                               <input type="text" formControlName="ownerEmail_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                           </div>                           
+                       </div>
+                   </div>
+                   
+                       <div style="margin-top: 15px;">
+                           <div>
+                               <div >
+                               <span id="inputGroup-sizing-lg"><b>{{secretNum_input_label_vb}}</b></span>
+                               </div>
+                               <input type="password" formControlName="secretNumber_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                           </div>                           
+                       </div>   
+                       
+
+                       
+                       <div  >
+                        <div >
+                            <div >
+                            <span id="inputGroup-sizing-lg">
+                             <b>{{userName_input_label_vb}}</b></span>
+                            </div>
+                            <input type="text" formControlName="userName_vb" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                       
+                    </div>
+                       
+                   <div >
+                    <div *ngIf="secretNumberValidator_vb">                    
+                       <span class="error_msg" ><registerScreen-msg messageSeek_vb="secret_number_required_msg"></registerScreen-msg></span>
+                    </div>
+                    <div *ngIf="validatePhoneEmail_vb">                    
+
+                       <span class="error_msg" ><registerScreen-msg messageSeek_vb="required_email_phone_label_msg"></registerScreen-msg></span>                         
+                    </div>
+                    <div style="padding-left:15px;"  class="error_msg">{{authorizeMsg_vb}}</div>
+                    <button type="submit" (click)="registerSubmit_mt()" >
+                        {{label_submit_upload_ads_vb}}</button>
+                    
+                   </div>
+                   <div style="margin-left: 60px;margin-bottom: 40px; background-color:#f1f1f1">
+                    <label style="font: 11px solid tomato">
+                        {{already_a_user_label_vb}}</label>
+                    <label ><a [routerLink]="['/showLogin/',apiKeyDto_vb.apikey_vb]">{{go_to_login_here_vb}}</a></label>
+                </div>
+                </div>
+               </form>
+
+                <!-- <form action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <h2></h2>
+                    </div>
+                    <div class="container">
+
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <button type="submit" (click)="registerSubmit_mt()">register</button>
+                    </div>
+                    <div style="margin-left: 60px;margin-bottom: 40px; background-color:#f1f1f1">
+                        <label style="font: 12px solid tomato">New User >>     </label>
+                        <label ><a [routerLink]="'/showRegister'">Register Here.</a></label>
+                    </div>
+                </form> -->
+        </div>
+       
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<router-outlet></router-outlet>

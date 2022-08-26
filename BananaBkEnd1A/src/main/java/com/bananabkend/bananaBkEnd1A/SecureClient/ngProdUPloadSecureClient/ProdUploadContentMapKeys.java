@@ -1,0 +1,758 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.bananabkend.bananaBkEnd1A.SecureClient.ngProdUPloadSecureClient;
+
+import java.util.LinkedHashMap;
+
+/**
+ *
+ * @author sunjiv6
+ */
+public class ProdUploadContentMapKeys {
+
+    public ProdUploadContentMapKeys() {
+    }
+    
+    LinkedHashMap<String,String> classComponentNames() {
+        LinkedHashMap<String,String> map = new LinkedHashMap<String,String>();        
+       	map.put("InvalidUrlComponent_cl",""); 
+        map.put("OwnerTargetAreaComponent_cl","");         
+        map.put("OwnerSideNavComponent_cl",""); 
+        map.put("ShowScreenComponent_cl","");
+        map.put("SideNavComponent_cl",""); 
+        map.put("OwnerToolbarComponent_cl","");
+        map.put("LocationComponent_cl","");         
+        map.put("PropertiesComponent_cl",""); 
+        map.put("OwnerListAdComponent_cl","");        
+        map.put("ListMyAdProperty_cl","");
+        map.put("OwnerLoginComponent_cl",""); 
+        map.put("OwnerScreenComponent_cl","");
+        map.put("UploadAdsMsgProperty_cl",""); 
+        map.put("OwnerScreenService_cl","");        
+        map.put("ResponseSuccess_cl",""); 
+        map.put("TargetAreaDto_cl","");        
+        map.put("SideNavProperty_cl","");        
+        map.put("ToolbarComponent_cl","");
+        map.put("TargetareaMsg_cl",""); 
+        map.put("ToolbarMsg_cl","");        
+        map.put("TargetArea_cl","");
+        map.put("MyAdsDto_cl",""); 
+        map.put("ApiKeyDto_cl",""); 
+        map.put("OwnerScreen_cl","");
+        map.put("MessageList_cl","");
+        map.put("SharedService_cl","");
+        map.put("CommonMessages_cl","");
+        map.put("CallOwnerUploadComponent_cl","");
+        map.put("CustomerOrderProperty_cl","");
+        map.put("CustomerOrderComponent_cl","");
+        map.put("UserDto_cl","");
+        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+//        map.put("ProductDeliveryStatus_cl","");
+        
+        return map;
+    }
+    
+    LinkedHashMap<String,String> messageAppProperties()
+    {
+        LinkedHashMap<String,String> map = new LinkedHashMap<String,String>();  
+        map.put("ownerToolBar_heading_msg",""); 
+        map.put("step1_btn_label_msg",""); 
+        map.put("step2_btn_label_msg",""); 
+        map.put("myads_btn_label_msg",""); 
+        map.put("upload_ads_step1_heading_msg",""); 
+        map.put("use_phone_auth_msg",""); 
+        map.put("use_email_auth_msg",""); 
+        map.put("phone_input_label_msg",""); 
+        map.put("email_input_label_msg",""); 
+        map.put("secretNum_input_label_msg",""); 
+	map.put("ad_type_heading_msg",""); 
+        map.put("ad_type_12_hrs_msg",""); 
+        map.put("ad_type_1_week_msg",""); 
+        map.put("ad_type_1_month_msg",""); 
+        map.put("ad_type_1_year_msg",""); 
+        map.put("chose_ad_label_msg","");
+        map.put("ownerToolBar_heading_msg",""); 
+        map.put("required_label_msg",""); 
+        map.put("desc_offer_label_msg",""); 
+        map.put("required_email_phone_label_msg",""); 
+        map.put("label_submit_upload_ads_msg",""); 
+        map.put("your_ads_label_msg",""); 
+        map.put("desc_word_length_label_msg",""); 
+        map.put("displayType_heading_msg",""); 
+        map.put("displayType1_msg",""); 
+        map.put("displayType2_msg",""); 
+        map.put("displayType3_msg",""); 
+       map.put("status_label_msg",""); 
+       map.put("status_yes_label_msg",""); 
+       map.put("status_no_label_msg",""); 
+       map.put("TargetArea_step2_heading_msg",""); 
+       map.put("use_phone_auth_msg",""); 
+       map.put("use_email_auth_msg",""); 
+       map.put("phone_input_label_msg",""); 
+       map.put("email_input_label_msg",""); 
+       map.put("secretNum_input_label_msg",""); 
+       map.put("load_ta_label_msg",""); 
+       map.put("ta_heading_msg",""); 
+       map.put("sample_address_syntax_msg",""); 
+       map.put("sample_address_start _msg",""); 
+       map.put("sample_address_1_msg",""); 
+       map.put("sample_address_2_msg",""); 
+       map.put("sample_address_3_msg",""); 
+       map.put("sample_address_4_msg",""); 
+       map.put("address_label_part1_msg",""); 
+       map.put("address_label_part2_msg",""); 
+       map.put("remove_label_msg",""); 
+       map.put("add_targetarea_label_msg",""); 
+       map.put("label_submit_targetarea_msg",""); 
+       map.put("ta_loading_plz_msg",""); 
+       map.put("ta_save_success_msg",""); 
+       map.put("required_email_phone_label_msg",""); 
+       map.put("required_label_msg",""); 
+       map.put("owner_login_msg",""); 
+       map.put("owner_past_data_msg",""); 
+       map.put("clients_msg",""); 
+       map.put("contact_msg",""); 
+       map.put("list_myads_heading_msg",""); 
+       map.put("use_phone_auth_msg",""); 
+       map.put("use_email_auth_msg",""); 
+       map.put("phone_input_label_msg",""); 
+       map.put("email_input_label_msg",""); 
+       map.put("secretNum_input_label_msg",""); 
+       map.put("sample_address_start_msg",""); 
+       map.put("load_my_ads_label_msg",""); 
+       map.put("th_heading_col1_msg",""); 
+       map.put("th_heading_col2_msg",""); 
+       map.put("th_heading_col3_msg",""); 
+       map.put("th_heading_col4_msg",""); 
+       map.put("th_heading_col5_msg",""); 
+       map.put("ad_type_label_msg",""); 
+       map.put("ad_image_label_msg",""); 
+       map.put("created_on_label_msg",""); 
+       map.put("status_on_label_msg",""); 
+       map.put("myAdsList_loading_plz_msg",""); 
+       map.put("required_email_phone_label_msg",""); 
+       map.put("required_label_msg",""); 
+       map.put("active_date_label_msg",""); 
+       map.put("msg_refresh_msg",""); 
+       map.put("msg_ok_msg","");         
+       map.put("msg_bad_msg","");           
+       map.put("usr_not_found_msg","");         
+       map.put("file_not_acc_msg","");         
+       map.put("chk_phn_eml_msg","");         
+       map.put("store_fail_msg","");         
+       map.put("size_heavy_msg","");         
+       map.put("limit_reach_msg","");         
+       map.put("trgt_stored_msg","");         
+       map.put("file_upld_done_msg","");                
+       map.put("modify_done_msg","");   
+       map.put("chose_category_label_msg","");   
+       
+       map.put("list_myads_heading_desc_msg","");         
+       map.put("required_price_label_msg","");         
+       map.put("required_tax_label_msg","");         
+       map.put("required_tax_detail_label_msg","");         
+       map.put("required_per_qnty_label_msg","");         
+       map.put("required_total_qnty_for_sale_label_msg","");                
+       map.put("product_name_label_msg","");   
+       map.put("price_label_msg","");   
+       map.put("per_qntty_label_msg","");         
+       map.put("total_qntty_label_msg","");         
+       map.put("tax_percent_label_msg","");         
+       map.put("tax_details_label_msg","");                
+       map.put("myOrders_btn_label_msg","");   
+       map.put("main_menu_msg","");   
+       map.put("merchant_upload_screen_msg","");         
+       map.put("merchant_sell_product_msg","");         
+ 
+       map.put("status_msg","");         
+       map.put("order_receive_date_time_msg","");         
+       map.put("delivery_address_msg","");         
+       map.put("prod_name_msg","");                
+       map.put("unit_detail_msg","");   
+       map.put("qntty_msg","");   
+       map.put("order_recev_msg","");         
+       map.put("processing_msg","");         
+       map.put("packaging_msg","");         
+       map.put("prep_dispatch_msg","");                
+       map.put("dispatch_msg","");   
+       map.put("out_for_delivery_msg","");   
+       map.put("delivered_msg","");         
+       map.put("returned_msg",""); 
+       map.put("main_menu_msg",""); 
+       map.put("merchant_upload_screen_msg",""); 
+       map.put("merchant_sell_product_msg",""); 
+       return map;
+
+    }
+
+    LinkedHashMap<String,String>  constantsInPropertios(){
+        LinkedHashMap<String,String> map = new LinkedHashMap<String,String>(); 
+        map.put("ToolbarPropertiesBng","");
+        map.put("UploadAdScreenPropertiesBng","");
+        map.put("TargetAreaPropertiesBng","");
+        map.put("OwnerSideNavPropertiesBng","");
+        map.put("ListMyAddPropertiesBng","");
+        map.put("CommonMessagesBng","");
+        map.put("ToolbarPropertiesEn","");
+        map.put("UploadAdScreenPropertiesEn","");
+        map.put("TargetAreaPropertiesEn","");
+        map.put("OwnerSideNavPropertiesEn","");
+        map.put("ListMyAddPropertiesEn","");
+        map.put("CommonMessagesEn","");
+        map.put("ToolbarPropertiesGj","");
+        map.put("UploadAdScreenPropertiesGj","");
+        map.put("TargetAreaPropertiesGj","");
+        map.put("OwnerSideNavPropertiesGj","");
+        map.put("ListMyAddPropertiesGj","");
+        map.put("CommonMessagesGj","");
+        map.put("ToolbarPropertiesHn","");
+        map.put("UploadAdScreenPropertiesHn","");
+        map.put("TargetAreaPropertiesHn","");
+        map.put("OwnerSideNavPropertiesHn","");
+        map.put("ListMyAddPropertiesHn","");
+        map.put("CommonMessagesHn","");
+        map.put("ToolbarPropertiesKn","");
+        map.put("UploadAdScreenPropertiesKn","");
+        map.put("TargetAreaPropertiesKn","");
+        map.put("OwnerSideNavPropertiesKn","");
+        map.put("ListMyAddPropertiesKn","");
+        map.put("CommonMessagesKn","");
+        map.put("ToolbarPropertiesMl","");
+        map.put("UploadAdScreenPropertiesMl","");
+        map.put("TargetAreaPropertiesMl","");
+        map.put("OwnerSideNavPropertiesMl","");
+        map.put("ListMyAddPropertiesMl","");
+        map.put("CommonMessagesMl","");
+        map.put("ToolbarPropertiesMr","");
+        map.put("UploadAdScreenPropertiesMr","");
+        map.put("TargetAreaPropertiesMr","");
+        map.put("OwnerSideNavPropertiesMr","");
+        map.put("ListMyAddPropertiesMr","");
+        map.put("CommonMessagesMr","");
+        map.put("ToolbarPropertiesPa","");
+        map.put("UploadAdScreenPropertiesPa","");
+        map.put("TargetAreaPropertiesPa","");
+        map.put("OwnerSideNavPropertiesPa","");
+        map.put("ListMyAddPropertiesPa","");
+        map.put("CommonMessagesPa","");
+        map.put("ToolbarPropertiesTa","");
+        map.put("UploadAdScreenPropertiesTa","");
+        map.put("TargetAreaPropertiesTa","");
+        map.put("OwnerSideNavPropertiesTa","");
+        map.put("ListMyAddPropertiesTa","");
+        map.put("CommonMessagesTa","");
+        map.put("ToolbarPropertiesTe","");
+        map.put("UploadAdScreenPropertiesTe","");
+        map.put("TargetAreaPropertiesTe","");
+        map.put("OwnerSideNavPropertiesTe","");
+        map.put("ListMyAddPropertiesTe","");
+        map.put("CommonMessagesTe","");
+        map.put("ToolbarPropertiesUr","");
+        map.put("UploadAdScreenPropertiesUr","");
+        map.put("TargetAreaPropertiesUr","");
+        map.put("OwnerSideNavPropertiesUr","");
+        map.put("ListMyAddPropertiesUr","");
+        map.put("CommonMessagesUr","");
+        map.put("CustomerOrderPropertiesBng","");
+        map.put("CustomerOrderPropertiesEn","");
+        map.put("CustomerOrderPropertiesGj","");
+        map.put("CustomerOrderPropertiesHn","");
+        map.put("CustomerOrderPropertiesKn","");
+        map.put("CustomerOrderPropertiesMl","");
+        map.put("CustomerOrderPropertiesMr","");
+        map.put("CustomerOrderPropertiesPa","");
+        map.put("CustomerOrderPropertiesTa","");
+        map.put("CustomerOrderPropertiesTe","");
+        map.put("CustomerOrderPropertiesUr","");
+        return map;
+}
+
+    
+    LinkedHashMap<String,String>  methods(){
+        
+    LinkedHashMap<String,String> map = new LinkedHashMap<String,String>(); 
+    map.put("showLocationAtTop_mt","");
+    map.put("hideLocationAtTop_mt","");
+    map.put("createForm_mt","");
+    map.put("onSubmit_mt","");
+    map.put("showSideNav_mt","");
+    map.put("hideSideNav_mt","");
+    map.put("showLocationAtTop_mt","");
+    map.put("hideLocationAtTop_mt","");
+    map.put("getMsg_mt","");
+    map.put("showSideNav_mt","");
+    map.put("hideSideNav_mt","");
+    map.put("arrivalToThePage_mt","");
+    map.put("corruptEveryThing_mt","");
+    map.put("changeLang_mt","");
+    map.put("ownerTargetAreaFormValidatorSuccess_mt","");
+    map.put("loadAllTargetArea_mt","");
+    map.put("populateTargetAreas_mt","");
+    map.put("targetsArray_mt","");
+    map.put("newTarget_mt","");
+    map.put("addTarget_mt","");
+    map.put("removeTarget_mt","");
+    map.put("onSubmit_mt","");
+    map.put("onSubmit2_mt","");
+    map.put("activatePhoneContent_mt","");
+    map.put("activateEmailContent_mt","");
+    map.put("activateEmailContent_mt","");
+    map.put("readApiKey_mt","");
+    map.put("modifyAd_mt","");
+    map.put("uploadTargetArea_mt","");
+    map.put("getAllTargetArea_mt","");
+    map.put("getAllMyAds_mt","");
+    map.put("getAdWithId_mt","");
+    map.put("getApiKey_mt","");
+    map.put("recordPlainTrack_mt","");
+    map.put("loadDoc_mt","");
+    map.put("getRequestCreated_mt","");
+    map.put("callGetAPIKey_mt","");
+    map.put("loadDoc_mt","");
+    map.put("ownerUploadFormValidatorSuccess_mt","");
+    map.put("onSubmit_mt","");
+    map.put("onSubmitReal_mt","");
+    map.put("onModifyReal_mt","");
+    map.put("loadMyAd_mt","");
+    map.put("onUpload_mt","");
+    map.put("handleChange_mt","");
+    map.put("activatePhoneContent_mt","");
+    map.put("activateEmailContent_mt","");
+    map.put("onSubmit2_mt","");
+    map.put("browseFile_mt","");
+    map.put("onFileSelect_mt","");
+    map.put("onKeyCountChar_mt","");
+    map.put("chooseSampleViewDisplayType_mt","");
+    map.put("showSampleView1_mt","");
+    map.put("showSampleView2_mt","");
+    map.put("showSampleView3_mt","");
+    map.put("createImageFromBlob_mt","");
+    map.put("sendGetReq_mt","");
+    map.put("activatePhoneContent_mt","");
+    map.put("activateEmailContent_mt","");
+    map.put("activatePhoneContent_mt","");
+    map.put("activateEmailContent_mt","");
+    map.put("listMyAdFormValidatorSuccess_mt","");
+    map.put("loadAllMyAds_mt","");
+    map.put("onSubmit_mt","");
+    map.put("createImageFromBlob_mt","");
+    map.put("sendGetReq_mt","");
+    map.put("sendClickEvent_mt","");
+    map.put("getClickEvent_mt","");           
+    map.put("corruptEveryThing_mt","");
+    map.put("uploadDataAndImage_mt","");
+    map.put("getAllCategory_mt","");
+    map.put("selectCategoryItemsOnLoad_mt","");
+    map.put("getProductWithId_mt","");
+    map.put("deliveryStatusChanged_mt","");
+    map.put("getAllMyCustomerOrders_mt","");
+    map.put("getAllMyProducts_mt","");
+    map.put("categorySelected_mt","");
+    map.put("onNameKeyCountChar_mt","");
+    map.put("deliveryStatus_mt","");
+    map.put("loadAllMyDeliveryOrders_mt","");
+    map.put("loadCategory_mt","");
+    map.put("selectCategoryItemsOnLoad_mt","");
+    
+    
+    return map;
+    }
+    
+    LinkedHashMap<String,String>  selectorTags(){
+        
+            LinkedHashMap<String,String> map = new LinkedHashMap<String,String>(); 
+
+            map.put("app-owner-toolbar","");
+            map.put("toolbar-msg","");
+            map.put("app-owner-login","");
+            map.put("app-owner-target-area","");
+            map.put("targetarea-msg","");
+            map.put("app-owner-screen","");
+            map.put("upload-ads-msg","");
+            map.put("app-owner-list-ad","");
+            map.put("list-my-ad-msg","");
+            map.put("app-owner-side-nav","");
+            map.put("owner-sidenav-msg","");
+            map.put("app-message","");
+            map.put("app-show-screen","");
+            map.put("app-side-nav","");
+            map.put("app-toolbar","");
+            map.put("app-customer-order","");
+            map.put("app-invalid-url","");
+            map.put("common-cl-msg","");
+            map.put("app-call-owner-upload","");
+    
+    return map;
+    }
+    
+    
+    LinkedHashMap<String,String>  languageHiding(){
+        
+            LinkedHashMap<String,String> map = new LinkedHashMap<String,String>(); 
+    
+            map.put("bng","");
+            map.put("en","");
+            map.put("gj","");
+            map.put("hn","");
+            map.put("kn","");
+            map.put("ml","");
+            map.put("mr","");
+            map.put("pa","");
+            map.put("ta","");
+            map.put("te","");
+            map.put("ur","");
+            
+            return map;
+    }
+    
+    LinkedHashMap<String,String>  variables(){
+        
+        LinkedHashMap<String,String> map = new LinkedHashMap<String,String>(); 
+
+        map.put("apiKeyDto_vb","");
+        map.put("language_vb","");
+        map.put("showSideNavToggle_vb","");
+        map.put("sharedService_vb","");
+        map.put("showSideNavToggle_vb","");
+        map.put("lang_vb","");
+        map.put("language_vb","");
+        map.put("goto_vb","");
+        map.put("router_vb","");
+        map.put("apiKeyDto_vb","");
+        map.put("responseSuccess_vb","");
+        map.put("selectedFile_vb","");
+        map.put("imageSrc_vb","");
+        map.put("showFileName_vb","");
+        map.put("uploadMsg_vb","");
+        map.put("contentDescMaxLength_vb","");
+        map.put("contentDescCurrentLength_vb","");
+        map.put("messageList_vb","");
+        map.put("identifyPhoneValidator_vb","");
+        map.put("identifyEmailValidator_vb","");
+        map.put("secretNumberValidator_vb","");
+        map.put("ownerFileValidator_vb","");
+        map.put("adTypeValidator_vb","");
+        map.put("showSampleView1Flag_vb","");
+        map.put("showSampleView2Flag_vb","");
+        map.put("showSampleView3Flag_vb","");
+        map.put("isModify_vb","");
+        map.put("isModifyId_vb","");
+        map.put("myAdsDto_vb","");
+        map.put("inputFileBrowse_vb","");
+        map.put("apiKeyDto1_vb","");
+        map.put("formBuilder_vb","");
+        map.put("ownerScreenService_vb","");
+        map.put("route_vb","");
+        map.put("contentDescMaxLength_vb","");
+        map.put("apiKeyDto_vb","");
+        map.put("apiKeyDto1_vb","");
+        map.put("chose_category_label_vb","");
+        map.put("togglePhoneActive_vb","");
+        map.put("gotoTargetsAreaScreen_vb","");
+        map.put("ownerScreen_vb","");
+        map.put("ownerUploadForm_vb","");
+        map.put("apiKeyDto_vb","");
+        map.put("route_vb","");
+        map.put("params_vb","");
+        map.put("isModifyId_vb","");
+        map.put("arrivalRes_vb","");
+        map.put("isModifyId_vb","");
+        map.put("ownerUploadForm_vb","");
+        map.put("step1_btn_label_vb","");
+        map.put("step2_btn_label_vb","");
+        map.put("myads_btn_label_vb","");
+        map.put("toolbarMsg_vb","");
+        map.put("sortedEmpListUrl_vb","");
+        //map.put("status_vb","");
+        //map.put("identify_vb","");
+        //map.put("adDisplayType_vb","");
+        //map.put("file_vb","");
+        map.put("ownerScreen_vb","");
+        map.put("formData_vb","");
+        map.put("myAdsDto_vb","");
+        map.put("error_vb","");
+        map.put("isValid_vb","");
+        map.put("selectedFile_vb","");
+        map.put("httpCodes_vb","");
+        //map.put("adType_vb","");
+        map.put("categoryDto_vb","");
+        map.put("messageList_vb","");
+        map.put("uploadMsg_vb","");
+        map.put("categoryTypeValidator_vb","");
+        map.put("files_vb","");
+        map.put("i_vb","");
+        map.put("responseSuccess_vb","");
+        map.put("togglePhoneActive_vb","");
+        map.put("taSize_vb","");
+        map.put("selectedCategory_vb","");
+        map.put("targetAreaDto_vb","");
+        map.put("ownerTargetAreaForm_vb","");
+        map.put("msgFromUpload_vb","");
+        map.put("ownerPhoneNum_vb","");
+        map.put("awaitingTargetArea_vb","");
+        map.put("awaitingSaveTargetArea_vb","");
+        map.put("authorizeDone_vb","");
+        map.put("messageList_vb","");
+        map.put("identifyPhoneValidator_vb","");
+        map.put("identifyEmailValidator_vb","");
+        map.put("secretNumberValidator_vb","");
+        map.put("taCount_vb","");
+        map.put("formBuilder_vb","");
+        map.put("ownerScreenService_vb","");
+        map.put("apiKeyDto1_vb","");
+        map.put("apiKeyDto_vb","");
+        map.put("ownerTargetAreaForm_vb","");
+        map.put("arrangeIn_vb","");
+        //map.put("secretNumber_vb","");
+        //map.put("identify_vb","");
+        //map.put("targets_vb","");
+        map.put("messageSeek_vb","");
+        map.put("finalMessage_vb","");
+        map.put("msgSeek_vb","");
+        map.put("language_vb","");
+        //map.put("message_vb","");
+        //map.put("status_vb","");
+        map.put("target_vb","");
+        //map.put("ownerPhone_vb","");
+        //map.put("secretNumber_vb","");
+        map.put("awaitingAuthorizeMsg_vb","");
+        map.put("togglePhoneActive_vb","");
+        map.put("ownerTargetAreaForm_vb","");
+        map.put("authorizeDone_vb","");
+        map.put("myAdsDto_vb","");
+        map.put("myAdsImageDto_vb","");
+        map.put("imageToShowA_vb","");
+        map.put("messageList_vb","");
+        map.put("msgs_vb","");
+        map.put("identifyPhoneValidator_vb","");
+        map.put("identifyEmailValidator_vb","");
+        map.put("secretNumberValidator_vb","");
+        map.put("imageIndex_vb","");
+        map.put("image_vb","");
+        map.put("reader_vb","");
+        map.put("myAdsDto_vb","");
+        map.put("image_vb","");
+        map.put("i_vb","");
+        map.put("data_vb","");
+        map.put("error_vb","");
+        map.put("clickEventsubscription_vb","");
+        //map.put("uploadedFileName_vb","");
+        //map.put("contentDesc_vb","");
+        //map.put("createdOn_vb","");
+        map.put("currentLength_vb","");
+        map.put("maxLength_vb","");
+        map.put("eTarget_vb","");
+        map.put("event_vb","");
+        map.put("showSideNavToggle_vb","");
+        map.put("showLocationAtTopToggle_vb","");
+        map.put("title_vb","");
+        map.put("showLocationAtTopToggle_vb","");
+        map.put("locationForm_vb","");
+        map.put("street_vb","");
+        map.put("sectorOrAreaOrIlaka_vb","");
+        map.put("city_vb","");
+        map.put("state_vb","");
+        map.put("pincode_vb","");
+        map.put("formBuilder_vb","");
+        map.put("images_vb","");
+        map.put("ownerScreenApiKey_vb","");
+        map.put("ownerScreenUploadUrl_vb","");
+        map.put("ownerScreenModifyUrl_vb","");
+        map.put("ownerTargetAreaSaveUrl_vb","");
+        map.put("ownerTargetAreaLoadUrl_vb","");
+        map.put("ownerLoadAllMyAdsUrl_vb","");
+        map.put("ownerLoadAdWithIdUrl_vb","");
+        
+        map.put("ownerGetOneImage_vb","");
+        map.put("recordTrackUri_vb","");
+        map.put("pageName_vb","");
+        map.put("baseUrl_vb","");   
+        map.put("TargetArea_step2_heading_vb","");  
+        map.put("use_phone_auth_vb","");  
+        map.put("use_email_auth_vb","");  
+        map.put("phone_input_label_vb","");  
+        map.put("email_input_label_vb","");  
+        map.put("secretNum_input_label_vb","");    
+        map.put("load_ta_label_vb","");  
+        map.put("ta_heading_vb","");  
+        map.put("sample_address_syntax_vb","");  
+        map.put("sample_address_start_vb","");  
+        map.put("sample_address_1_vb","");  
+        map.put("sample_address_2_vb","");  
+        map.put("sample_address_3_vb","");  
+        map.put("sample_address_4_vb","");     
+        map.put("address_label_part1_vb","");  
+        map.put("address_label_part2_vb","");  
+        map.put("remove_label_vb","");  
+        map.put("add_targetarea_label_vb","");  
+        map.put("label_submit_targetarea_vb","");  
+        map.put("targetArea_vb","");
+        map.put("subscription_vb","");
+        map.put("everySecond_vb","");
+        map.put("imageIndexInc_vb","");
+        map.put("listMyAdProperty_vb","");
+        map.put("uploadAdsMsgProperty_vb","");
+        map.put("targetArea_vb","");
+        map.put("toolbarMsg_vb","");
+        map.put("ownerPhone_vb","");
+        map.put("ownerEmail_vb","");
+        map.put("secretNumber_vb","");
+        map.put("identify_vb","");
+        map.put("targets_vb","");
+        map.put("updatedOn_vb","");
+        map.put("apikey_vb","");
+        map.put("message_vb","");
+        map.put("status_vb","");
+        map.put("adType_vb","");
+        map.put("status_vb","");        
+        map.put("identify_vb","");        
+        map.put("adDisplayType_vb","");
+        map.put("file_vb","");        
+        map.put("contentDesc_vb","");
+        map.put("load_my_ads_label_vb","");
+        map.put("status_on_label_vb","");
+        map.put("active_date_label_vb","");
+        map.put("ad_type_label_vb","");
+        map.put("created_on_label_vb","");  
+        map.put("required_email_phone_label_vb","");  
+        map.put("list_myads_heading_vb","");  
+        map.put("everySecond_vb","");  
+        map.put("subject_vb","");
+        map.put("imageToShow_vb","");
+        map.put("id_vb","");
+        map.put("createdOn_vb","");
+        map.put("activeDate_vb","");
+        map.put("upload_ads_step1_heading_vb","");
+        map.put("status_yes_label_vb","");
+        map.put("status_no_label_vb","");
+        map.put("displayType_heading_vb","");
+        map.put("displayType1_vb","");
+        map.put("displayType2_vb","");
+        map.put("displayType3_vb","");
+        map.put("ad_type_heading_vb","");
+        map.put("ad_type_12_hrs_vb","");
+        map.put("ad_type_1_week_vb","");
+        map.put("ad_type_1_month_vb","");
+        map.put("ad_type_1_year_vb","");
+        map.put("chose_ad_label_vb","");
+        map.put("desc_offer_label_vb","");
+        map.put("desc_word_length_label_vb","");
+        map.put("label_submit_upload_ads_vb","");
+        map.put("file_not_acc_vb","");
+        map.put("usr_not_found_vb","");
+        map.put("file_upld_done_vb","");
+        map.put("modify_done_vb","");
+        map.put("limit_reach_vb","");
+        map.put("commonMsgProperty_vb","");
+        map.put("uploadedFileName_vb","");
+        map.put("inputFile01_vb","");
+        map.put("ta_save_success_vb","");
+        map.put("ta_loading_plz_vb","");
+        map.put("http_vb","");
+        map.put("xhttp_vb","");        
+        map.put("categoryType_vb","");  
+        map.put("myAdsList_loading_plz_vb","");  
+        map.put("msg_refresh_vb","");
+        map.put("getAllCategoryUri_vb","");
+
+        
+        map.put("categoryName_vb","");
+        map.put("contentDescValidator_vb","");
+        map.put("contentNameMaxLength_vb","");
+        map.put("contentNameValidator_vb","");
+        map.put("contentNameCurrentLength_vb","");
+        map.put("priceValidator_vb","");
+        map.put("taxValidator_vb","");
+        map.put("taxDetailsValidator_vb","");
+        map.put("totalQuantityForSaleValidator_vb","");
+        map.put("unitOfthePriceValidator_vb","");
+        map.put("price_vb","");
+        map.put("unitOfthePrice_vb","");
+        map.put("totalQuantityForSale_vb","");
+        map.put("tax_vb","");        
+        map.put("taxDetails_vb","");  
+        map.put("product_name_label_vb","");  
+        map.put("total_qntty_label_vb","");
+        map.put("tax_percent_label_vb","");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        map.put("tax_details_label_vb","");
+        map.put("required_price_label_vb","");
+        map.put("required_tax_label_vb","");
+        map.put("required_tax_detail_label_vb","");
+        map.put("price_label_vb","");
+        map.put("per_qntty_label_vb","");
+        map.put("productDeliveryStatus_vb","");
+        map.put("productDeliveryStatusForm_vb","");
+        map.put("list_myads_heading_desc_vb","");
+        map.put("status_msg_vb","");
+        map.put("order_receive_date_time_msg_vb","");
+        map.put("delivery_address_msg_vb","");
+        map.put("prod_name_msg_vb","");        
+        map.put("unit_detail_msg_vb","");  
+        map.put("qntty_msg_vb","");  
+        map.put("order_recev_msg_vb","");
+        map.put("processing_msg_vb","");
+        map.put("packaging_msg_vb","");
+        map.put("prep_dispatch_msg_vb","");
+        map.put("dispatch_msg_vb","");
+        map.put("out_for_delivery_msg_vb","");
+        map.put("delivered_msg_vb","");
+        map.put("returned_msg_vb","");
+        map.put("userDto_vb","");
+        map.put("processing_msg_vb","");
+        map.put("ownerMarketSaveUrl_vb","");
+        map.put("ownerMarketLoadUrl_vb","");
+        map.put("ownerListProductUrl_vb","");
+        map.put("ownerLoadProductWithIdUrl_vb","");
+        map.put("customerOrderListUrl_vb","");
+        map.put("orderByCol_vb","");
+        map.put("userName_vb","");
+        map.put("userId_vb","");
+        map.put("search_vb","");
+        map.put("likedItemRowId_vb","");
+        map.put("userDto_vb","");
+        map.put("userId_vb","");
+        map.put("list_myads_heading_desc_vb","");
+        map.put("myOrders_btn_label_vb","");
+        map.put("main_menu_msg_vb","");
+        map.put("merchant_upload_screen_msg_vb","");
+        map.put("merchant_sell_product_msg_vb","");
+        map.put("deliveryStatusChangedUri_vb","");
+        map.put("contentName_vb","");
+        map.put("val_vb","");
+        map.put("merchant_upload_screen_msg_vb","");
+        map.put("merchant_sell_product_msg_vb","");
+        map.put("price_id_vb","");
+        
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+//        map.put("deliveryStatusChangedUri_vb","");
+        return map;
+        
+    }
+
+}

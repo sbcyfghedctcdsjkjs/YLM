@@ -1,0 +1,30 @@
+<label class="locationAtTop_before" ></label>
+<form [formGroup]="locationForm_vb" (ngSubmit)="onSubmit_mt()" class="locationAtTop" >  
+  <!-- <label  class="closebtn" (click)="hideLocationAtTop()">&times;</label> -->
+    <h1>Location</h1>
+    <div class="form-group">
+    <label for="street">
+      Street:</label>
+      <input type="text" formControlName="street_vb">
+    </div>
+    <label>
+      Sector / Area / Ilaka:
+      <input type="text" formControlName="sectorOrAreaOrIlaka_vb">
+    </label>
+    <label>
+      City:
+      <input type="text" formControlName="city_vb">
+    </label>
+    
+    <label>
+      State:
+      <input type="text" formControlName="state_vb">
+    </label>
+  
+    <label>
+      Pin Code:
+      <input type="text" formControlName="pincode_vb">
+    </label>  
+    <button class="btn btn-primary" type="submit">Submit</button>
+     
+</form>
